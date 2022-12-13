@@ -18,6 +18,9 @@ namespace TimePilot
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Rectangle ship;
+        Texture2D debug;
+        float rotation;
 
         public Game1()
         {
@@ -34,6 +37,12 @@ namespace TimePilot
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = 800;
+            graphics.ApplyChanges();
+
+            ship = new Rectangle(400, 400, 50, 80);
+            rotation = 0;
 
             base.Initialize();
         }
@@ -48,6 +57,7 @@ namespace TimePilot
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            debug = this.Content.Load<Texture2D>("debug");
         }
 
         /// <summary>
@@ -71,6 +81,10 @@ namespace TimePilot
                 this.Exit();
 
             // TODO: Add your update logic here
+            GamePadState pad1 = GamePad.GetState(PlayerIndex.One);
+
+            if (Math.Abs(pad1.ThumbSticks.Left.X) > .5 || Math.Abs(pad1.ThumbSticks.Left.Y) > .5)
+                rotation = (float)Math.Atan2(pad1.ThumbSticks.Left.X, pad1.ThumbSticks.Left.Y);
 
             base.Update(gameTime);
         }
@@ -84,6 +98,11 @@ namespace TimePilot
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            spriteBatch.Begin();
+
+            spriteBatch.Draw(debug,ship,ship,Color.Red,rotation,new Vector2(25,40),new SpriteEffects(),0);
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
