@@ -21,7 +21,9 @@ namespace TimePilot
         Rectangle ship;
         Texture2D debug;
         float rotation;
-
+        List<Bullet> bullets;
+        Texture2D bulletTex;
+        int timer;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -43,6 +45,7 @@ namespace TimePilot
 
             ship = new Rectangle(400, 400, 50, 80);
             rotation = 0;
+            bullets = new List<Bullet>();
 
             base.Initialize();
         }
@@ -58,6 +61,7 @@ namespace TimePilot
 
             // TODO: use this.Content to load your game content here
             debug = this.Content.Load<Texture2D>("debug");
+            bulletTex = this.Content.Load<Texture2D>("square");
         }
 
         /// <summary>
@@ -76,6 +80,7 @@ namespace TimePilot
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            timer++;
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
@@ -85,6 +90,27 @@ namespace TimePilot
 
             if (Math.Abs(pad1.ThumbSticks.Left.X) > .5 || Math.Abs(pad1.ThumbSticks.Left.Y) > .5)
                 rotation = (float)Math.Atan2(pad1.ThumbSticks.Left.X, pad1.ThumbSticks.Left.Y);
+
+            if (pad1.IsButtonDown(Buttons.RightTrigger))
+            {
+                if (timer % 10 == 0)
+                { 
+                    bullets.Add(new Bullet(rotation)); 
+                }
+            }
+
+
+            for (var i = 0; i < bullets.Count; i++)
+            {
+
+                bullets[i].update();
+                if (bullets[i].rect.X > 800 || bullets[i].rect.X < 0 || bullets[i].rect.Y > 800 || bullets[i].rect.Y < 0)
+                {
+                    bullets.Remove(bullets[i]);
+                }
+
+
+            }
 
             base.Update(gameTime);
         }
@@ -101,6 +127,15 @@ namespace TimePilot
             spriteBatch.Begin();
 
             spriteBatch.Draw(debug,ship,ship,Color.Red,rotation,new Vector2(25,40),new SpriteEffects(),0);
+
+            for (var i = 0; i < bullets.Count; i++)
+            {
+                //spriteBatch.Draw(projectile, rockets[i], Color.White);
+                spriteBatch.Draw(bulletTex, new Vector2(bullets[i].rect.X, bullets[i].rect.Y), null, Color.White,
+                (float)bullets[i].rotation,
+                new Vector2(5, 5), 0.2f,
+                SpriteEffects.None, 0);
+            }
 
             spriteBatch.End();
 
