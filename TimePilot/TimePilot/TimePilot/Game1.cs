@@ -21,6 +21,7 @@ namespace TimePilot
         Rectangle ship;
         Texture2D debug;
         float rotation;
+        SpriteFont debugFont;
 
         public Game1()
         {
@@ -58,6 +59,7 @@ namespace TimePilot
 
             // TODO: use this.Content to load your game content here
             debug = this.Content.Load<Texture2D>("debug");
+            debugFont = this.Content.Load<SpriteFont>("SpriteFont1");
         }
 
         /// <summary>
@@ -82,9 +84,25 @@ namespace TimePilot
 
             // TODO: Add your update logic here
             GamePadState pad1 = GamePad.GetState(PlayerIndex.One);
+            float padRotation = (float)Math.Atan2(pad1.ThumbSticks.Left.X, pad1.ThumbSticks.Left.Y);
 
-            if (Math.Abs(pad1.ThumbSticks.Left.X) > .5 || Math.Abs(pad1.ThumbSticks.Left.Y) > .5)
-                rotation = (float)Math.Atan2(pad1.ThumbSticks.Left.X, pad1.ThumbSticks.Left.Y);
+            if (padRotation < 0)
+                padRotation += (float)Math.PI * 2;
+
+            if (rotation > Math.PI * 2)
+                rotation -= (float)Math.PI * 2;
+
+            float degreesApart = (Math.Abs(MathHelper.ToDegrees(padRotation) - MathHelper.ToDegrees(rotation)));
+
+            
+
+            if ((Math.Abs(pad1.ThumbSticks.Left.X) > .5 || Math.Abs(pad1.ThumbSticks.Left.Y) > .5) && degreesApart>=10) 
+            {
+                rotation += MathHelper.ToRadians(8);
+
+                if (degreesApart <= 10)
+                    rotation = padRotation;
+            }
 
             base.Update(gameTime);
         }
@@ -101,6 +119,7 @@ namespace TimePilot
             spriteBatch.Begin();
 
             spriteBatch.Draw(debug,ship,ship,Color.Red,rotation,new Vector2(25,40),new SpriteEffects(),0);
+            spriteBatch.DrawString(debugFont, rotation + "", new Vector2(600, 600), Color.Black);
 
             spriteBatch.End();
 
