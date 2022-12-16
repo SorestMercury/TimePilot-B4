@@ -24,6 +24,8 @@ namespace TimePilot
         List<Bullet> bullets;
         Texture2D bulletTex;
         int timer;
+        Texture2D spriteSheet1;
+        Rectangle[] shipSource;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -47,6 +49,14 @@ namespace TimePilot
             rotation = 0;
             bullets = new List<Bullet>();
 
+            shipSource = new Rectangle[16];
+
+            Vector2 temp = new Vector2(50, 50);
+            for(int x=0;x<shipSource.Length;x++)
+            {
+                shipSource[x] = new Rectangle();
+            }
+
             base.Initialize();
         }
 
@@ -62,6 +72,7 @@ namespace TimePilot
             // TODO: use this.Content to load your game content here
             debug = this.Content.Load<Texture2D>("debug");
             bulletTex = this.Content.Load<Texture2D>("square");
+            spriteSheet1 = this.Content.Load<Texture2D>("spritesheet1");
         }
 
         /// <summary>
