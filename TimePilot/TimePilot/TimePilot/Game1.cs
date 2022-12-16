@@ -18,6 +18,7 @@ namespace TimePilot
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Texture2D titleScreen;
 
         public Game1()
         {
@@ -48,6 +49,7 @@ namespace TimePilot
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            titleScreen = this.Content.Load<Texture2D>("titlescreen");
         }
 
         /// <summary>
@@ -84,7 +86,9 @@ namespace TimePilot
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            //aa
+            spriteBatch.Begin();
+            spriteBatch.Draw(titleScreen, new Rectangle(0, 0, 800, 800), Color.White);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
