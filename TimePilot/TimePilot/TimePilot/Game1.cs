@@ -18,8 +18,10 @@ namespace TimePilot
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Texture2D titleScreen;
-
+        enum Status { title, ranks, play, lvl1, lvl2, lvl3, lvl5, lvl6, gameover, endscreen}
+        Texture2D[] titleScreens;
+        Status s;
+        GamePadState oldpad1 = GamePad.GetState(PlayerIndex.One);
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -35,6 +37,14 @@ namespace TimePilot
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = 800;
+            graphics.ApplyChanges();
+
+            s = Status.title;
+            titleScreens = new Texture2D[10];
+
+            
 
             base.Initialize();
         }
@@ -49,7 +59,17 @@ namespace TimePilot
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            titleScreen = this.Content.Load<Texture2D>("titlescreen");
+
+            titleScreens[0] = this.Content.Load<Texture2D>("titlescreen");
+            titleScreens[1] = this.Content.Load<Texture2D>("titlescores");
+            titleScreens[2] = this.Content.Load<Texture2D>("lvl1s");
+            titleScreens[3] = this.Content.Load<Texture2D>("lvl2");
+            titleScreens[4] = this.Content.Load<Texture2D>("lvl3");
+            titleScreens[5] = this.Content.Load<Texture2D>("lvl4");
+            titleScreens[6] = this.Content.Load<Texture2D>("lvl5");
+            titleScreens[7] = this.Content.Load<Texture2D>("lvl6");
+            titleScreens[8] = this.Content.Load<Texture2D>("gameover");
+            titleScreens[9] = this.Content.Load<Texture2D>("end");
         }
 
         /// <summary>
@@ -68,12 +88,19 @@ namespace TimePilot
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            GamePadState pad1 = GamePad.GetState(PlayerIndex.One);
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
             // TODO: Add your update logic here
+            if (pad1.Buttons.Start == ButtonState.Pressed && oldpad1.Buttons.Start != ButtonState.Pressed && (int)s < 9) 
+            {
+                s++;
+            }
 
+
+            oldpad1 = pad1;
             base.Update(gameTime);
         }
 
@@ -87,7 +114,7 @@ namespace TimePilot
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            spriteBatch.Draw(titleScreen, new Rectangle(0, 0, 800, 800), Color.White);
+            spriteBatch.Draw(titleScreens[(int)s], new Rectangle(0, 0, 800, 800), Color.White);
             spriteBatch.End();
 
             base.Draw(gameTime);
