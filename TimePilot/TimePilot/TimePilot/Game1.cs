@@ -88,8 +88,19 @@ namespace TimePilot
             // TODO: Add your update logic here
             GamePadState pad1 = GamePad.GetState(PlayerIndex.One);
 
-            if (Math.Abs(pad1.ThumbSticks.Left.X) > .5 || Math.Abs(pad1.ThumbSticks.Left.Y) > .5)
-                rotation = (float)Math.Atan2(pad1.ThumbSticks.Left.X, pad1.ThumbSticks.Left.Y);
+            float joyRotation = (float)Math.Atan2(pad1.ThumbSticks.Left.X, pad1.ThumbSticks.Left.Y);
+
+            if(Math.Abs(pad1.ThumbSticks.Left.X )>= .5 || Math.Abs(pad1.ThumbSticks.Left.Y )>= .5)
+            {
+                float distance = Math.Abs(rotation - joyRotation);
+
+                if (distance > Math.PI)
+                    joyRotation += (float)(2 * Math.PI * Math.Sign(rotation - joyRotation));
+
+                rotation = MathHelper.Lerp(rotation, joyRotation, 0.2f);
+
+                rotation = MathHelper.WrapAngle(rotation);
+            }
 
             if (pad1.IsButtonDown(Buttons.RightTrigger))
             {
