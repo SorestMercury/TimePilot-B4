@@ -56,3 +56,24 @@ C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86
 C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.exe
 C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.pdb
 C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\square.xnb
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\debug.xnb
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\square.xnb
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.exe
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.pdb
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.dll
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.xml
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.AssemblyReference.cache
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.CoreCompileInputs.cache
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.CopyComplete
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.exe
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.pdb
+C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\green.xnb

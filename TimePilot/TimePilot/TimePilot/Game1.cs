@@ -24,6 +24,8 @@ namespace TimePilot
         List<Bullet> bullets;
         Texture2D bulletTex;
         int timer;
+        List<Enemy> enemies;
+        Texture2D plane;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -47,6 +49,8 @@ namespace TimePilot
             rotation = 0;
             bullets = new List<Bullet>();
 
+            enemies = new List<Enemy>();
+            
             base.Initialize();
         }
 
@@ -60,8 +64,15 @@ namespace TimePilot
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            plane = this.Content.Load<Texture2D>("green");
             debug = this.Content.Load<Texture2D>("debug");
             bulletTex = this.Content.Load<Texture2D>("square");
+
+
+            enemies.Add(new Enemy(plane, 1000));
+            enemies.Add(new Enemy(plane, 1000));
+            enemies.Add(new Enemy(plane, 1000));
+
         }
 
         /// <summary>
@@ -123,6 +134,21 @@ namespace TimePilot
 
             }
 
+
+            for (int i = 0; i < enemies.Count; i++)
+            {
+                enemies[i].update();
+                if (enemies[i].rect.X < 0 || enemies[i].rect.Y < 0 || enemies[i].rect.Y > 800 || enemies[i].rect.Y > 800)
+                {
+                    enemies.Remove(enemies[i]);
+                }
+            }
+
+            if (enemies.Count < 5)
+            {
+                enemies.Add(new Enemy(plane, 1000));
+            }
+
             base.Update(gameTime);
         }
 
@@ -137,7 +163,13 @@ namespace TimePilot
             // TODO: Add your drawing code here
             spriteBatch.Begin();
 
-            spriteBatch.Draw(debug,ship,ship,Color.Red,rotation,new Vector2(25,40),new SpriteEffects(),0);
+            spriteBatch.Draw(debug, ship, ship, Color.Red, rotation, new Vector2(25, 40), new SpriteEffects(), 0);
+
+            for (int i = 0; i < enemies.Count; i++)
+            {
+                spriteBatch.Draw(enemies[i].tex, enemies[i].rect, Color.White);
+
+            }
 
             for (var i = 0; i < bullets.Count; i++)
             {

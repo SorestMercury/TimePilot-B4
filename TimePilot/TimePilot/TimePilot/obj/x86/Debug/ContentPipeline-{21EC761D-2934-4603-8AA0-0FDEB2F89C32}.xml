@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\debug.xnb</Output>
-      <Time>2022-12-16T15:29:54.9381185-06:00</Time>
+      <Output>C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\debug.xnb</Output>
+      <Time>2022-12-14T15:37:58.3066739-06:00</Time>
     </Item>
     <Item>
       <Source>square.png</Source>
@@ -16,8 +16,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\square.xnb</Output>
-      <Time>2022-12-16T15:46:12.777343-06:00</Time>
+      <Output>C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\square.xnb</Output>
+      <Time>2022-12-14T15:49:13.4554485-06:00</Time>
+    </Item>
+    <Item>
+      <Source>green.png</Source>
+      <Name>green</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\green.xnb</Output>
+      <Time>2022-12-16T15:59:46.8706705-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -26,10 +35,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilotContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilotContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -58,7 +67,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2022-08-12T11:55:56.3227481-05:00</Value>
+        <Value>2022-08-12T11:58:07.3223632-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
