@@ -84,6 +84,7 @@ namespace TimePilot
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            //aaaa
 
             base.Draw(gameTime);
         }
