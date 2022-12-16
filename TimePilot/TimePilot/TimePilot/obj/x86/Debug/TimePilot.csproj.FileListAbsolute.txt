@@ -36,7 +36,6 @@ C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x8
 C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.CopyComplete
 C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.exe
 C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.pdb
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\SpriteFont1.xnb
 C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\debug.xnb
 C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.exe
 C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.pdb
