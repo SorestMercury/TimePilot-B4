@@ -24,6 +24,8 @@ namespace TimePilot
         List<Bullet> bullets;
         Texture2D bulletTex;
         int timer;
+        List<Enemy> enemies;
+        Texture2D plane;
         Texture2D spriteSheet1;
         Rectangle[] shipSource;
         Rectangle currentSprite;
@@ -51,6 +53,8 @@ namespace TimePilot
             rotation = 0;
             bullets = new List<Bullet>();
 
+            enemies = new List<Enemy>();
+            
             shipSource = new Rectangle[32];
 
             Vector2 temp = new Vector2(0, 0);
@@ -117,8 +121,15 @@ namespace TimePilot
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            plane = this.Content.Load<Texture2D>("green");
             debug = this.Content.Load<Texture2D>("debug");
             bulletTex = this.Content.Load<Texture2D>("square");
+
+
+            enemies.Add(new Enemy(plane, 1000));
+            enemies.Add(new Enemy(plane, 1000));
+            enemies.Add(new Enemy(plane, 1000));
+
             spriteSheet1 = this.Content.Load<Texture2D>("improved spritesheet1");
         }
 
@@ -181,6 +192,21 @@ namespace TimePilot
 
             }
 
+
+            for (int i = 0; i < enemies.Count; i++)
+            {
+                enemies[i].update();
+                if (enemies[i].rect.X < 0 || enemies[i].rect.Y < 0 || enemies[i].rect.Y > 800 || enemies[i].rect.Y > 800)
+                {
+                    enemies.Remove(enemies[i]);
+                }
+            }
+
+            }
+
+            if (enemies.Count < 5)
+            {
+                enemies.Add(new Enemy(plane, 1000));
             for (int x = 0; x < rotations.Length-1; x++)
             {
                 if (rotation <= rotations[x] && rotation > rotations[x + 1])
@@ -201,6 +227,13 @@ namespace TimePilot
             // TODO: Add your drawing code here
             spriteBatch.Begin();
 
+            spriteBatch.Draw(debug, ship, ship, Color.Red, rotation, new Vector2(25, 40), new SpriteEffects(), 0);
+
+            for (int i = 0; i < enemies.Count; i++)
+            {
+                spriteBatch.Draw(enemies[i].tex, enemies[i].rect, Color.White);
+
+            }
             spriteBatch.Draw(spriteSheet1,ship,currentSprite,Color.White,0,new Vector2(41,42),new SpriteEffects(),0);
 
             for (var i = 0; i < bullets.Count; i++)

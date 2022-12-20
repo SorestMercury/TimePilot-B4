@@ -43,6 +43,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="green.png">
+      <Name>green</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="spritesheet1.png">
       <Name>spritesheet1</Name>
       <Importer>TextureImporter</Importer>
