@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\titlescreen.xnb</Output>
-      <Time>2022-12-16T15:43:22.724586-06:00</Time>
+      <Output>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\titlescreen.xnb</Output>
+      <Time>2022-12-20T15:10:38.2214083-06:00</Time>
     </Item>
     <Item>
       <Source>starttp.PNG</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\starttp.xnb</Output>
-      <Time>2022-12-16T15:54:51.5485628-06:00</Time>
+      <Output>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\starttp.xnb</Output>
+      <Time>2022-12-20T15:10:38.1583364-06:00</Time>
     </Item>
     <Item>
       <Source>titlescores.PNG</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\titlescores.xnb</Output>
-      <Time>2022-12-16T16:01:33.6194946-06:00</Time>
+      <Output>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\titlescores.xnb</Output>
+      <Time>2022-12-20T15:10:38.1895865-06:00</Time>
     </Item>
     <Item>
       <Source>end.PNG</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\end.xnb</Output>
-      <Time>2022-12-16T16:09:31.4474435-06:00</Time>
+      <Output>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\end.xnb</Output>
+      <Time>2022-12-20T15:10:37.7520829-06:00</Time>
     </Item>
     <Item>
       <Source>gameover.PNG</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\gameover.xnb</Output>
-      <Time>2022-12-16T16:09:31.4554202-06:00</Time>
+      <Output>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\gameover.xnb</Output>
+      <Time>2022-12-20T15:10:37.798962-06:00</Time>
     </Item>
     <Item>
       <Source>lvl1s.PNG</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl1s.xnb</Output>
-      <Time>2022-12-16T16:09:31.504361-06:00</Time>
+      <Output>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl1s.xnb</Output>
+      <Time>2022-12-20T15:10:37.8145835-06:00</Time>
     </Item>
     <Item>
       <Source>lvl2.PNG</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl2.xnb</Output>
-      <Time>2022-12-16T16:09:31.4963822-06:00</Time>
+      <Output>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl2.xnb</Output>
+      <Time>2022-12-20T15:10:37.8614575-06:00</Time>
     </Item>
     <Item>
       <Source>lvl3.PNG</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl3.xnb</Output>
-      <Time>2022-12-16T16:09:31.488435-06:00</Time>
+      <Output>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl3.xnb</Output>
+      <Time>2022-12-20T15:10:37.8927054-06:00</Time>
     </Item>
     <Item>
       <Source>lvl4.PNG</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl4.xnb</Output>
-      <Time>2022-12-16T16:09:31.4804246-06:00</Time>
+      <Output>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl4.xnb</Output>
+      <Time>2022-12-20T15:10:37.9552086-06:00</Time>
     </Item>
     <Item>
       <Source>lvl5.PNG</Source>
@@ -88,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl5.xnb</Output>
-      <Time>2022-12-16T16:09:31.4734439-06:00</Time>
+      <Output>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl5.xnb</Output>
+      <Time>2022-12-20T15:10:37.9708342-06:00</Time>
     </Item>
     <Item>
       <Source>lvl6.PNG</Source>
@@ -97,8 +97,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl6.xnb</Output>
-      <Time>2022-12-16T16:09:31.4644676-06:00</Time>
+      <Output>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl6.xnb</Output>
+      <Time>2022-12-20T15:10:38.0020876-06:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont1.spritefont</Source>
+      <Name>SpriteFont1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2022-12-20T15:25:02.4480228-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -107,10 +116,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilotContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilotContent\</RootDirectory>
+      <LoggerRootDirectory>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\</LoggerRootDirectory>
+      <IntermediateDirectory>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -139,7 +148,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2022-08-12T11:55:59.7134272-05:00</Value>
+        <Value>2022-08-12T14:34:26.4896105-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

@@ -18,6 +18,7 @@ namespace TimePilot
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        SpriteFont titleScreenFont;
         enum Status { title, ranks, play, lvl1, lvl2, lvl3, lvl5, lvl6, gameover, endscreen}
         Texture2D[] titleScreens;
         Status s;
@@ -70,6 +71,7 @@ namespace TimePilot
             titleScreens[7] = this.Content.Load<Texture2D>("lvl6");
             titleScreens[8] = this.Content.Load<Texture2D>("gameover");
             titleScreens[9] = this.Content.Load<Texture2D>("end");
+            titleScreenFont = Content.Load<SpriteFont>("SpriteFont1");
         }
 
         /// <summary>
@@ -110,11 +112,33 @@ namespace TimePilot
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
             // TODO: Add your drawing code here
+            //comment
             spriteBatch.Begin();
-            spriteBatch.Draw(titleScreens[(int)s], new Rectangle(0, 0, 800, 800), Color.White);
+            // spriteBatch.Draw(titleScreens[(int)s], new Rectangle(0, 0, 800, 800), Color.White);
+            spriteBatch.DrawString(titleScreenFont, "PLAY", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLAY").Length() / 2, 150), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+
+            // spriteBatch.DrawString(titleScreenFont, "PLAY", new Vector2(350, 150), Color.DeepSkyBlue);
+            spriteBatch.DrawString(titleScreenFont, "1 -- UP", new Vector2(0, 0), Color.Red);
+            spriteBatch.DrawString(titleScreenFont, "2 -- UP", new Vector2(GraphicsDevice.Viewport.Width - titleScreenFont.MeasureString("2 -- UP").Length(), 0), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+
+            // spriteBatch.DrawString(titleScreenFont, "2 -- UP", new Vector2(730, 0), Color.Red);
+            spriteBatch.DrawString(titleScreenFont, "SCORE", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("SCORE").Length() / 2, 0), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            //spriteBatch.DrawString(titleScreenFont, "HI --  SCORE", new Vector2(GraphicsDevice. ), Color.Red);
+            spriteBatch.DrawString(titleScreenFont, "TIME     PILOT", new Vector2((GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("TIME     PILOT").Length() / 2) - 3, 202), Color.DarkOrange, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            spriteBatch.DrawString(titleScreenFont, "TIME     PILOT", new Vector2((GraphicsDevice.Viewport.Width  / 2 - titleScreenFont.MeasureString("TIME     PILOT").Length() / 2), 200), Color.Yellow, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            spriteBatch.DrawString(titleScreenFont, "PLEASE   DEPOSIT   COIN", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLEASE   DEPOSIT   COIN").Length() / 2, 250), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            spriteBatch.DrawString(titleScreenFont, "AND   TRY   THIS   GAME", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("AND   TRY   THIS   GAME").Length() / 2, 300), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+
+            // spriteBatch.DrawString(titleScreenFont, "TIME     PILOT", new Vector2(300, 200), Color.Yellow);
+            //spriteBatch.DrawString(titleScreenFont, "PLEASE   DEPOSIT   COIN", new Vector2(230, 250), Color.DeepSkyBlue);
+            // spriteBatch.DrawString(titleScreenFont, "AND   TRY   THIS   GAME", new Vector2(250, 275), Color.Red);
+            spriteBatch.DrawString(titleScreenFont, "CREDIT  00", new Vector2(GraphicsDevice.Viewport.Width - titleScreenFont.MeasureString("CREDIT  00").Length(), GraphicsDevice.Viewport.Height - 26), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+
+
+
             spriteBatch.End();
 
             base.Draw(gameTime);

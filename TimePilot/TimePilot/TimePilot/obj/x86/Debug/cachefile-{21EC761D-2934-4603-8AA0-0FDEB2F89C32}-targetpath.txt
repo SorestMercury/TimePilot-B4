@@ -9,3 +9,4 @@ Content\lvl3.xnb
 Content\lvl4.xnb
 Content\lvl5.xnb
 Content\lvl6.xnb
+Content\SpriteFont1.xnb
