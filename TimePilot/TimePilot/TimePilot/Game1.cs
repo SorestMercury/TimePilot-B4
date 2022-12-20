@@ -22,6 +22,7 @@ namespace TimePilot
         enum Status { title, ranks, play, lvl1, lvl2, lvl3, lvl5, lvl6, gameover, endscreen}
         Texture2D[] titleScreens;
         Status s;
+        KeyboardState kb;
         GamePadState oldpad1 = GamePad.GetState(PlayerIndex.One);
         public Game1()
         {
@@ -92,11 +93,16 @@ namespace TimePilot
         {
             GamePadState pad1 = GamePad.GetState(PlayerIndex.One);
             // Allows the game to exit
+            kb = Keyboard.GetState();
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
             // TODO: Add your update logic here
             if (pad1.Buttons.Start == ButtonState.Pressed && oldpad1.Buttons.Start != ButtonState.Pressed && (int)s < 9) 
+            {
+                s++;
+            }
+            if (kb.IsKeyDown(Keys.Space))
             {
                 s++;
             }
@@ -117,25 +123,33 @@ namespace TimePilot
             // TODO: Add your drawing code here
             //comment
             spriteBatch.Begin();
-            // spriteBatch.Draw(titleScreens[(int)s], new Rectangle(0, 0, 800, 800), Color.White);
-            spriteBatch.DrawString(titleScreenFont, "PLAY", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLAY").Length() / 2, 150), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            if (s== 0 )
+            {
+                spriteBatch.DrawString(titleScreenFont, "PLAY", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLAY").Length() / 2, 150), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+                spriteBatch.DrawString(titleScreenFont, "1 -- UP", new Vector2(0, 0), Color.Red);
+                spriteBatch.DrawString(titleScreenFont, "2 -- UP", new Vector2(GraphicsDevice.Viewport.Width - titleScreenFont.MeasureString("2 -- UP").Length(), 0), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+                spriteBatch.DrawString(titleScreenFont, "SCORE", new Vector2(GraphicsDevice.Viewport.Wid-th / 2 - titleScreenFont.MeasureString("SCORE").Length() / 2, 0), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+                spriteBatch.DrawString(titleScreenFont, "TIME     PILOT", new Vector2((GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("TIME     PILOT").Length() / 2) - 3, 202), Color.DarkOrange, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+                spriteBatch.DrawString(titleScreenFont, "TIME     PILOT", new Vector2((GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("TIME     PILOT").Length() / 2), 200), Color.Yellow, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+                spriteBatch.DrawString(titleScreenFont, "PLEASE   DEPOSIT   COIN", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLEASE   DEPOSIT   COIN").Length() / 2, 250), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+                spriteBatch.DrawString(titleScreenFont, "AND   TRY   THIS   GAME", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("AND   TRY   THIS   GAME").Length() / 2, 300), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+                spriteBatch.DrawString(titleScreenFont, "CREDIT  00", new Vector2(GraphicsDevice.Viewport.Width - titleScreenFont.MeasureString("CREDIT  00").Length(), GraphicsDevice.Viewport.Height - 26), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            }
+            if (s != 0)
+            {
+                spriteBatch.DrawString(titleScreenFont, "PLAYER  1", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLAYER  1").Length() / 2, 250), Color.White, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+                spriteBatch.DrawString(titleScreenFont, "GAME  OVER", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("GAME  OVER").Length() / 2, 350), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            }
 
-            // spriteBatch.DrawString(titleScreenFont, "PLAY", new Vector2(350, 150), Color.DeepSkyBlue);
-            spriteBatch.DrawString(titleScreenFont, "1 -- UP", new Vector2(0, 0), Color.Red);
-            spriteBatch.DrawString(titleScreenFont, "2 -- UP", new Vector2(GraphicsDevice.Viewport.Width - titleScreenFont.MeasureString("2 -- UP").Length(), 0), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-
-            // spriteBatch.DrawString(titleScreenFont, "2 -- UP", new Vector2(730, 0), Color.Red);
-            spriteBatch.DrawString(titleScreenFont, "SCORE", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("SCORE").Length() / 2, 0), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-            //spriteBatch.DrawString(titleScreenFont, "HI --  SCORE", new Vector2(GraphicsDevice. ), Color.Red);
-            spriteBatch.DrawString(titleScreenFont, "TIME     PILOT", new Vector2((GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("TIME     PILOT").Length() / 2) - 3, 202), Color.DarkOrange, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-            spriteBatch.DrawString(titleScreenFont, "TIME     PILOT", new Vector2((GraphicsDevice.Viewport.Width  / 2 - titleScreenFont.MeasureString("TIME     PILOT").Length() / 2), 200), Color.Yellow, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-            spriteBatch.DrawString(titleScreenFont, "PLEASE   DEPOSIT   COIN", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLEASE   DEPOSIT   COIN").Length() / 2, 250), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-            spriteBatch.DrawString(titleScreenFont, "AND   TRY   THIS   GAME", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("AND   TRY   THIS   GAME").Length() / 2, 300), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-
-            // spriteBatch.DrawString(titleScreenFont, "TIME     PILOT", new Vector2(300, 200), Color.Yellow);
-            //spriteBatch.DrawString(titleScreenFont, "PLEASE   DEPOSIT   COIN", new Vector2(230, 250), Color.DeepSkyBlue);
-            // spriteBatch.DrawString(titleScreenFont, "AND   TRY   THIS   GAME", new Vector2(250, 275), Color.Red);
-            spriteBatch.DrawString(titleScreenFont, "CREDIT  00", new Vector2(GraphicsDevice.Viewport.Width - titleScreenFont.MeasureString("CREDIT  00").Length(), GraphicsDevice.Viewport.Height - 26), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            //spriteBatch.DrawString(titleScreenFont, "PLAY", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLAY").Length() / 2, 150), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            //spriteBatch.DrawString(titleScreenFont, "1 -- UP", new Vector2(0, 0), Color.Red);
+            //spriteBatch.DrawString(titleScreenFont, "2 -- UP", new Vector2(GraphicsDevice.Viewport.Width - titleScreenFont.MeasureString("2 -- UP").Length(), 0), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            //spriteBatch.DrawString(titleScreenFont, "SCORE", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("SCORE").Length() / 2, 0), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            //spriteBatch.DrawString(titleScreenFont, "TIME     PILOT", new Vector2((GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("TIME     PILOT").Length() / 2) - 3, 202), Color.DarkOrange, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            //spriteBatch.DrawString(titleScreenFont, "TIME     PILOT", new Vector2((GraphicsDevice.Viewport.Width  / 2 - titleScreenFont.MeasureString("TIME     PILOT").Length() / 2), 200), Color.Yellow, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            //spriteBatch.DrawString(titleScreenFont, "PLEASE   DEPOSIT   COIN", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLEASE   DEPOSIT   COIN").Length() / 2, 250), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            //spriteBatch.DrawString(titleScreenFont, "AND   TRY   THIS   GAME", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("AND   TRY   THIS   GAME").Length() / 2, 300), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            //spriteBatch.DrawString(titleScreenFont, "CREDIT  00", new Vector2(GraphicsDevice.Viewport.Width - titleScreenFont.MeasureString("CREDIT  00").Length(), GraphicsDevice.Viewport.Height - 26), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
 
 
 
