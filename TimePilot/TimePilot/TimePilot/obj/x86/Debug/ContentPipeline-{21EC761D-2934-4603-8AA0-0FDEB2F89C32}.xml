@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\square.xnb</Output>
-      <Time>2022-12-20T16:11:49.194023-06:00</Time>
+      <Time>2022-12-20T16:27:52.3942732-06:00</Time>
     </Item>
     <Item>
       <Source>green.png</Source>
@@ -26,19 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\green.xnb</Output>
-      <Time>2022-12-20T16:00:37.8135861-06:00</Time>
-    </Item>
-    <Item>
-      <Source>spritesheet1.png</Source>
-      <Name>spritesheet1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Parameters>
-        <Data Key="ColorKeyEnabled">False</Data>
-      </Parameters>
-      <Options>None</Options>
-      <Output>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\spritesheet1.xnb</Output>
-      <Time>2022-12-20T15:59:20.3311816-06:00</Time>
+      <Time>2022-12-20T16:27:52.3872917-06:00</Time>
     </Item>
     <Item>
       <Source>improved spritesheet1.png</Source>
@@ -50,16 +38,7 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\improved spritesheet1.xnb</Output>
-      <Time>2022-12-20T15:59:20.3242023-06:00</Time>
-    </Item>
-    <Item>
-      <Source>plane.png</Source>
-      <Name>plane</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\plane.xnb</Output>
-      <Time>2022-12-20T16:03:39.7120028-06:00</Time>
+      <Time>2022-12-20T16:28:08.9407503-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

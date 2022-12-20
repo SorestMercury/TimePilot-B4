@@ -122,7 +122,7 @@ namespace TimePilot
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            plane = this.Content.Load<Texture2D>("plane");
+            plane = this.Content.Load<Texture2D>("green");
             debug = this.Content.Load<Texture2D>("debug");
             bulletTex = this.Content.Load<Texture2D>("square");
 
