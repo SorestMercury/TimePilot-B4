@@ -184,14 +184,11 @@ namespace TimePilot
                     if (timer % 10 == 0)
                     {
                         bullets.Add(new Bullet(rotation));
+                        score -= 10;
                     }
                 }
             }
-                { 
-                    bullets.Add(new Bullet(rotation));
-                    score -= 10;
-                }
-            }
+
 
             for (var i = 0; i < bullets.Count; i++)
             {
