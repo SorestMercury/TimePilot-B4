@@ -56,3 +56,6 @@ C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86
 C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.exe
 C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.pdb
 C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\square.xnb
+C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\square.xnb
+C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\spritesheet1.xnb
+C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\improved spritesheet1.xnb

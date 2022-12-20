@@ -26,6 +26,8 @@ namespace TimePilot
         int timer;
         Texture2D spriteSheet1;
         Rectangle[] shipSource;
+        Rectangle currentSprite;
+        float[] rotations;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -45,17 +47,62 @@ namespace TimePilot
             graphics.PreferredBackBufferHeight = 800;
             graphics.ApplyChanges();
 
-            ship = new Rectangle(400, 400, 50, 80);
+            ship = new Rectangle(400, 400, 60, 65);
             rotation = 0;
             bullets = new List<Bullet>();
 
-            shipSource = new Rectangle[16];
+            shipSource = new Rectangle[32];
 
-            Vector2 temp = new Vector2(50, 50);
+            Vector2 temp = new Vector2(0, 0);
             for(int x=0;x<shipSource.Length;x++)
             {
-                shipSource[x] = new Rectangle();
+                shipSource[x] = new Rectangle((int)temp.X,(int)temp.Y,82,85);
+
+                if (temp.Y == 0 || temp.Y==180)
+                    temp.X += 88;
+
+                else
+                    temp.X += 90;
+
+                if ((x + 1) % 8 == 0)
+                {
+                    temp.Y += 90;
+                    temp.X = 0;
+                }
             }
+
+            Rectangle[] tempArray = new Rectangle[shipSource.Length];
+            for (int x = 0; x < 17; x++)
+                tempArray[x] = shipSource[x];
+
+            int flip = 17;
+            for (int x = shipSource.Length-1; x > 16; x--)
+            {
+                tempArray[flip] = shipSource[x];
+                flip++;
+            }
+
+
+            shipSource=tempArray;
+
+            currentSprite = shipSource[0];
+
+            rotations = new float[33];
+
+            int count = 0;
+            for (double x = 0; x > -(Math.PI); x -= (Math.PI / 16))
+            {
+                rotations[count] = (float)x;
+                count++;
+            }
+
+            for (double x = Math.PI; x > 0; x -= (Math.PI / 16))
+            {
+                rotations[count] = (float)x;
+                count++;
+            }
+
+            rotations[32] = rotations[0];
 
             base.Initialize();
         }
@@ -72,7 +119,7 @@ namespace TimePilot
             // TODO: use this.Content to load your game content here
             debug = this.Content.Load<Texture2D>("debug");
             bulletTex = this.Content.Load<Texture2D>("square");
-            spriteSheet1 = this.Content.Load<Texture2D>("spritesheet1");
+            spriteSheet1 = this.Content.Load<Texture2D>("improved spritesheet1");
         }
 
         /// <summary>
@@ -134,6 +181,12 @@ namespace TimePilot
 
             }
 
+            for (int x = 0; x < rotations.Length-1; x++)
+            {
+                if (rotation <= rotations[x] && rotation > rotations[x + 1])
+                    currentSprite = shipSource[x];
+            }
+
             base.Update(gameTime);
         }
 
@@ -148,7 +201,7 @@ namespace TimePilot
             // TODO: Add your drawing code here
             spriteBatch.Begin();
 
-            spriteBatch.Draw(debug,ship,ship,Color.Red,rotation,new Vector2(25,40),new SpriteEffects(),0);
+            spriteBatch.Draw(spriteSheet1,ship,currentSprite,Color.White,0,new Vector2(25,40),new SpriteEffects(),0);
 
             for (var i = 0; i < bullets.Count; i++)
             {
