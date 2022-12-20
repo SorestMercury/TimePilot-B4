@@ -26,6 +26,8 @@ namespace TimePilot
             this.tex = tex;
             dx = rand.Next(-5, 5);
             dy = rand.Next(-5, 5);
+
+            int direction = rand.Next(0, 1);
             rotation = (float)Math.Atan2(dx, dy);
 
             int startX = 0;
@@ -34,29 +36,74 @@ namespace TimePilot
 
             if (dx > 0 && dy > 0)
             {
-                 startX = rand.Next(0, 400);
-                 startY = rand.Next(0, 400);
+                if (direction == 1)
+                {
+                    startX = 0;
+                    startY = rand.Next(0, 400);
+
+                }
+                else if (direction == 0)
+                {
+                    startY = 0;
+                    startX = rand.Next(0, 400);
+                }
+                
             }
 
             if (dx < 0 && dy > 0)
             {
-                 startX = rand.Next(400, 800);
-                 startY = rand.Next(0, 400);
+                if (direction == 1)
+                {
+                    startX = 800;
+                    startY = rand.Next(0, 400);
+
+                }
+                else if (direction == 0)
+                {
+                    startY = 0;
+                    startX = rand.Next(400, 800);
+
+                }
+
             }
 
             if (dx > 0 && dy < 0)
             {
-                 startX = rand.Next(0, 400);
-                 startY = rand.Next(400, 800);
+                if (direction == 1)
+                {
+                    startX = 0;
+                    startY = rand.Next(400, 800);
+
+                }
+                else if (direction == 0)
+                {
+                    startY = 800;
+                    startX = rand.Next(0, 400);
+                }
+
             }
 
             if (dx < 0 && dy < 0)
             {
-                 startX = rand.Next(400, 800);
-                 startY = rand.Next(0, 400);
+                if (direction == 1)
+                {
+                    startX = 800;
+                    startY = rand.Next(0, 400);
+
+                }
+                else if (direction == 0)
+                {
+                    startY = 800;
+                    startX = rand.Next(400, 800);
+                }
             }
 
 
+            if (dx == 0 && dy == 0)
+            {
+                startX = -10;
+                startY = -10;
+            }
 
             rect = new Rectangle(startX, startY, 10, 10);
         }
