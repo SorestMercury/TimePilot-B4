@@ -159,7 +159,7 @@ namespace TimePilot
 
             float joyRotation = (float)Math.Atan2(pad1.ThumbSticks.Left.X, pad1.ThumbSticks.Left.Y);
 
-            if(Math.Abs(pad1.ThumbSticks.Left.X )>= .5 || Math.Abs(pad1.ThumbSticks.Left.Y )>= .5)
+            if (Math.Abs(pad1.ThumbSticks.Left.X) >= .5 || Math.Abs(pad1.ThumbSticks.Left.Y) >= .5)
             {
                 float distance = Math.Abs(rotation - joyRotation);
 
@@ -174,8 +174,8 @@ namespace TimePilot
             if (pad1.IsButtonDown(Buttons.RightTrigger))
             {
                 if (timer % 10 == 0)
-                { 
-                    bullets.Add(new Bullet(rotation)); 
+                {
+                    bullets.Add(new Bullet(rotation));
                 }
             }
 
@@ -202,15 +202,15 @@ namespace TimePilot
                 }
             }
 
+            for (int x = 0; x < rotations.Length - 1; x++)
+            {
+                if (rotation <= rotations[x] && rotation > rotations[x + 1])
+                    currentSprite = shipSource[x];
             }
 
             if (enemies.Count < 5)
             {
                 enemies.Add(new Enemy(plane, 1000));
-            for (int x = 0; x < rotations.Length-1; x++)
-            {
-                if (rotation <= rotations[x] && rotation > rotations[x + 1])
-                    currentSprite = shipSource[x];
             }
 
             base.Update(gameTime);
@@ -226,8 +226,6 @@ namespace TimePilot
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-
-            spriteBatch.Draw(debug, ship, ship, Color.Red, rotation, new Vector2(25, 40), new SpriteEffects(), 0);
 
             for (int i = 0; i < enemies.Count; i++)
             {
