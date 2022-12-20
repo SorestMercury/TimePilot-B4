@@ -82,7 +82,7 @@ namespace TimePilot
                 flip++;
             }
 
-
+            tempArray[16].Y-=10;
             shipSource=tempArray;
 
             currentSprite = shipSource[0];
@@ -201,7 +201,7 @@ namespace TimePilot
             // TODO: Add your drawing code here
             spriteBatch.Begin();
 
-            spriteBatch.Draw(spriteSheet1,ship,currentSprite,Color.White,0,new Vector2(25,40),new SpriteEffects(),0);
+            spriteBatch.Draw(spriteSheet1,ship,currentSprite,Color.White,0,new Vector2(41,42),new SpriteEffects(),0);
 
             for (var i = 0; i < bullets.Count; i++)
             {

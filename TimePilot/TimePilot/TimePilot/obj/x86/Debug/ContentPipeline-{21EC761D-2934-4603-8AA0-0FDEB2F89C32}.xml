@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\debug.xnb</Output>
-      <Time>2022-12-14T20:04:57.1471116-06:00</Time>
+      <Output>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\debug.xnb</Output>
+      <Time>2022-12-16T15:29:54.9381185-06:00</Time>
     </Item>
     <Item>
       <Source>square.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\square.xnb</Output>
-      <Time>2022-12-19T20:57:30.7639297-06:00</Time>
+      <Output>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\square.xnb</Output>
+      <Time>2022-12-16T15:46:12.777343-06:00</Time>
     </Item>
     <Item>
       <Source>spritesheet1.png</Source>
@@ -28,8 +28,8 @@
         <Data Key="ColorKeyEnabled">False</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\spritesheet1.xnb</Output>
-      <Time>2022-12-19T20:57:30.760874-06:00</Time>
+      <Output>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\spritesheet1.xnb</Output>
+      <Time>2022-12-16T16:23:30.5641081-06:00</Time>
     </Item>
     <Item>
       <Source>improved spritesheet1.png</Source>
@@ -40,8 +40,8 @@
         <Data Key="ColorKeyEnabled">False</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\improved spritesheet1.xnb</Output>
-      <Time>2022-12-20T00:41:42.0112476-06:00</Time>
+      <Output>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\improved spritesheet1.xnb</Output>
+      <Time>2022-12-20T15:01:25.7414185-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -50,10 +50,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilotContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilotContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -82,7 +82,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2022-09-25T15:55:39.008878-05:00</Value>
+        <Value>2022-08-12T11:55:56.3227481-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
