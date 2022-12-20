@@ -80,3 +80,4 @@ C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\T
 C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\plane.xnb
 C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\green.xnb
 C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\improved spritesheet1.xnb
+C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\plane.xnb

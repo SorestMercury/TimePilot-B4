@@ -2,3 +2,4 @@ Content\debug.xnb
 Content\square.xnb
 Content\green.xnb
 Content\improved spritesheet1.xnb
+Content\plane.xnb
