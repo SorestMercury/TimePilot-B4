@@ -28,7 +28,7 @@ namespace TimePilot
             dy = rand.Next(-5, 5);
 
             int direction = rand.Next(0, 1);
-            rotation = (float)Math.Atan2(dx, dy);
+            rotation = (float)Math.Atan2(dy, dx) + (float)Math.PI/2;
 
             int startX = 0;
 
@@ -105,7 +105,7 @@ namespace TimePilot
                 startY = -10;
             }
 
-            rect = new Rectangle(startX, startY, 10, 10);
+            rect = new Rectangle(startX, startY, 60, 60);
         }
 
         public void update()

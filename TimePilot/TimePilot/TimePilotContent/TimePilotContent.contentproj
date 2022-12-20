@@ -50,19 +50,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="spritesheet1.png">
-      <Name>spritesheet1</Name>
+    <Compile Include="plane.png">
+      <Name>plane</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
-      <ProcessorParameters_ColorKeyEnabled>False</ProcessorParameters_ColorKeyEnabled>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="improved spritesheet1.png">
-      <Name>improved spritesheet1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <ProcessorParameters_ColorKeyEnabled>False</ProcessorParameters_ColorKeyEnabled>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
