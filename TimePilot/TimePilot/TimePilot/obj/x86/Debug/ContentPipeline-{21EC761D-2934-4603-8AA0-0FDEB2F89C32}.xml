@@ -28,6 +28,15 @@
       <Output>C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\green.xnb</Output>
       <Time>2022-12-16T15:59:46.8706705-06:00</Time>
     </Item>
+    <Item>
+      <Source>plane.png</Source>
+      <Name>plane</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\plane.xnb</Output>
+      <Time>2022-12-20T16:03:39.7120028-06:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{21EC761D-2934-4603-8AA0-0FDEB2F89C32}</ContentProjectGUID>

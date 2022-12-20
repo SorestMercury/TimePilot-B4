@@ -26,6 +26,7 @@ namespace TimePilot
         int timer;
         List<Enemy> enemies;
         Texture2D plane;
+        int score = 0;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -64,7 +65,7 @@ namespace TimePilot
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            plane = this.Content.Load<Texture2D>("green");
+            plane = this.Content.Load<Texture2D>("plane");
             debug = this.Content.Load<Texture2D>("debug");
             bulletTex = this.Content.Load<Texture2D>("square");
 
@@ -121,7 +122,8 @@ namespace TimePilot
             {
                 if (timer % 5 == 0)
                 { 
-                    bullets.Add(new Bullet(rotation)); 
+                    bullets.Add(new Bullet(rotation));
+                    score -= 10;
                 }
             }
 
@@ -146,7 +148,6 @@ namespace TimePilot
                 {
                     eToRmove.Add(enemies[i]);
 
-
                 }
 
                 if (enemies[i].rect.Intersects(ship))
@@ -162,6 +163,7 @@ namespace TimePilot
                     {
                         bToRmove.Add(bullet);
                         eToRmove.Add(enemies[i]);
+                        score += enemies[i].points;
 
                     }
                 }
@@ -204,7 +206,8 @@ namespace TimePilot
 
             for (int i = 0; i < enemies.Count; i++)
             {
-                spriteBatch.Draw(enemies[i].tex, enemies[i].rect, Color.White);
+                //spriteBatch.Draw(enemies[i].tex, enemies[i].rect, Color.White);
+                spriteBatch.Draw(plane, enemies[i].rect, null, Color.Red, enemies[i].rotation, new Vector2(30, 30), new SpriteEffects(), 0);
 
             }
 
