@@ -96,6 +96,10 @@ namespace TimePilot
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+
+            List<Enemy> eToRmove = new List<Enemy>();
+            List<Bullet> bToRmove = new List<Bullet>();
+
             // TODO: Add your update logic here
             GamePadState pad1 = GamePad.GetState(PlayerIndex.One);
 
@@ -115,7 +119,7 @@ namespace TimePilot
 
             if (pad1.IsButtonDown(Buttons.RightTrigger))
             {
-                if (timer % 10 == 0)
+                if (timer % 5 == 0)
                 { 
                     bullets.Add(new Bullet(rotation)); 
                 }
@@ -128,7 +132,7 @@ namespace TimePilot
                 bullets[i].update();
                 if (bullets[i].rect.X > 800 || bullets[i].rect.X < 0 || bullets[i].rect.Y > 800 || bullets[i].rect.Y < 0)
                 {
-                    bullets.Remove(bullets[i]);
+                    bToRmove.Add(bullets[i]);
                 }
 
 
@@ -140,8 +144,41 @@ namespace TimePilot
                 enemies[i].update();
                 if (enemies[i].rect.X < 0 || enemies[i].rect.Y < 0 || enemies[i].rect.Y > 800 || enemies[i].rect.Y > 800)
                 {
-                    enemies.Remove(enemies[i]);
+                    eToRmove.Add(enemies[i]);
+
+
                 }
+
+                if (enemies[i].rect.Intersects(ship))
+                {
+                    eToRmove.Add(enemies[i]);
+
+                    //lose a life
+                }
+                foreach (Bullet bullet in bullets)
+                {
+
+                    if (enemies[i].rect.Intersects(bullet.rect))
+                    {
+                        bToRmove.Add(bullet);
+                        eToRmove.Add(enemies[i]);
+
+                    }
+                }
+
+               
+
+                
+            }
+            foreach (Enemy en in eToRmove)
+            {
+                enemies.Remove(en);
+            }
+
+
+            foreach (Bullet b in bToRmove)
+            {
+                bullets.Remove(b);
             }
 
             if (enemies.Count < 5)
@@ -184,5 +221,15 @@ namespace TimePilot
 
             base.Draw(gameTime);
         }
+
+
+        public Boolean isOverlapping(Rectangle rec1, Rectangle rec2)
+        {
+            if ((rec1.X + rec1.Width >= rec2.X && rec1.X < (rec2.X + rec2.Width)) && (rec1.Y + rec1.Height >= rec2.Y && rec1.Y < (rec2.Y + rec2.Height)))
+            { return true; }
+            else
+            { return false; }
+        }
+
     }
 }
