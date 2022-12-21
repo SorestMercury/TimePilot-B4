@@ -1,89 +1,59 @@
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\debug.xnb
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.exe
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.pdb
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.dll
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.xml
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.AssemblyReference.cache
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.CoreCompileInputs.cache
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.CopyComplete
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.exe
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.pdb
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\debug.xnb
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.exe
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.pdb
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.dll
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.xml
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.AssemblyReference.cache
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.CoreCompileInputs.cache
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.CopyComplete
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.exe
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.pdb
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\debug.xnb
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.exe
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.pdb
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.dll
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.xml
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.AssemblyReference.cache
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.CoreCompileInputs.cache
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.CopyComplete
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.exe
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.pdb
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\square.xnb
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\debug.xnb
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\square.xnb
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.exe
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.pdb
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.dll
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.xml
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.AssemblyReference.cache
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.CoreCompileInputs.cache
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.CopyComplete
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.exe
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.pdb
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\green.xnb
-C:\Users\246995\Desktop\Video Game Programming - Nikita\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\plane.xnb
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\green.xnb
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\improved spritesheet1.xnb
-C:\Users\169281\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\plane.xnb
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\square.xnb
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\green.xnb
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\improved spritesheet1.xnb
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\plane.xnb
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\clouds plate 1.xnb
-C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\cloud plate 2.xnb
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\titlescreen.xnb
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.exe
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.pdb
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.dll
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.xml
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.AssemblyReference.cache
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.CoreCompileInputs.cache
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.CopyComplete
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.exe
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.pdb
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\starttp.xnb
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\titlescores.xnb
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\end.xnb
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\gameover.xnb
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl1s.xnb
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl2.xnb
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl3.xnb
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl4.xnb
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl5.xnb
+C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl6.xnb
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\titlescreen.xnb
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\starttp.xnb
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\titlescores.xnb
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\end.xnb
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\gameover.xnb
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl1s.xnb
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl2.xnb
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl3.xnb
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl4.xnb
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl5.xnb
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl6.xnb
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.exe
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.pdb
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.dll
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.xml
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.AssemblyReference.cache
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.CoreCompileInputs.cache
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.csproj.CopyComplete
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.exe
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\TimePilot.pdb
+\\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\SpriteFont1.xnb
