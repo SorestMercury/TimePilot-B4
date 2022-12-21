@@ -38,11 +38,16 @@ namespace TimePilot
         Texture2D cloud2;
         List<Rectangle> bottomClouds;
         SpriteFont titleScreenFont;
-        enum Status { title, play, gameover}
+        enum Status { title, playLoad, play, lostLife, gameover}
         Status gameState;
         KeyboardState kb;
         GamePadState oldpad1 = GamePad.GetState(PlayerIndex.One);
         SpriteFont bigFont;
+        int loadTime=0;
+        Color background = Color.Black;
+        Rectangle[] lives;
+        int hp = 3;
+        int lostLife = 0;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -140,7 +145,12 @@ namespace TimePilot
 
 
             gameState = Status.title;
-            
+
+            lives = new Rectangle[3];
+            lives[0] = new Rectangle(20, 20, 60, 65);
+            lives[1] = new Rectangle(80, 20, 60, 65);
+            lives[2] = new Rectangle(140, 20, 60, 65);
+
 
             base.Initialize();
         }
@@ -246,7 +256,14 @@ namespace TimePilot
             
             if (pad1.Buttons.Start == ButtonState.Pressed && oldpad1.Buttons.Start != ButtonState.Pressed && gameState==Status.title) 
             {
-                gameState=Status.play;
+                gameState=Status.playLoad;
+                loadTime = timer;
+            }
+
+            if (timer-loadTime == 60 && loadTime!=0 && gameState!=Status.gameover)
+            {
+                gameState = Status.play;
+                background = new Color(8, 84, 100);
             }
 
             for (int x = 0; x < rotations.Length - 1; x++)
@@ -323,21 +340,34 @@ namespace TimePilot
 
                 }
 
-                if (enemies[i].hitbox.Intersects(shipHitBox))
+                if (enemies[i].hitbox.Intersects(shipHitBox) && gameState!=Status.lostLife)
                 {
                     eToRmove.Add(enemies[i]);
+
+                    hp--;
+
+                    if (hp != 0)
+                    {
+                        gameState = Status.lostLife;
+                        lostLife = timer;
+                    }
+
 
                     //lose a life
                 }
                 foreach (Bullet bullet in bullets)
                 {
 
-                    if (enemies[i].hitbox.Intersects(bullet.rect))
+                    if (enemies[i].hitbox.Intersects(bullet.rect) && gameState==Status.play)
                     {
                         bToRmove.Add(bullet);
-                        eToRmove.Add(enemies[i]);
-                        score += 100;
+                        enemies[i].hp--;
 
+                        if(enemies[i].hp<=0)
+                        {
+                            eToRmove.Add(enemies[i]);
+                            score += 100;
+                        }
                     }
                 }
 
@@ -354,6 +384,15 @@ namespace TimePilot
                 bullets.Remove(b);
             }
 
+            if (hp == 0)
+                gameState = Status.gameover;
+
+            if (timer - lostLife == 60 && lostLife!=0 && gameState!=Status.gameover)
+            {
+                gameState = Status.play;
+                enemies.Clear();
+            }
+
 
 
 
@@ -367,8 +406,7 @@ namespace TimePilot
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(new Color(8, 84, 100));
-            GraphicsDevice.Clear(Color.Black);
+            GraphicsDevice.Clear(background);
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
@@ -457,7 +495,12 @@ namespace TimePilot
 
             if(gameState==Status.play)
             {
+                spriteBatch.Draw(debug, new Rectangle(0, 0, 800, 100), Color.Black);
+
                 spriteBatch.DrawString(titleScreenFont, "SCORE " + score, new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("SCORE " + score).Length() / 2, 0), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+
+                for (int x = 0; x < hp; x++)
+                        spriteBatch.Draw(spriteSheet1, lives[x], shipSource[0], Color.White);
             }
 
             if (gameState == Status.gameover)

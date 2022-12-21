@@ -21,8 +21,10 @@ namespace TimePilot
         Random rand;
         public Rectangle rect;
         public Rectangle hitbox;
+        public int hp;
         public Enemy(Texture2D tex, int points) 
         {
+            hp = 3;
             rand = new Random();
             this.tex = tex;
             dx = rand.Next(-5, 5);
@@ -35,11 +37,11 @@ namespace TimePilot
 
             int startY = 0;
 
-            while (dx == 0 && dy == 0)
+            /*while (dx == 0 && dy == 0)
             {
                 dx = rand.Next(-5, 5);
                 dy = rand.Next(-5, 5);
-            }
+            }*/
 
             if (dx > 0 && dy > 0)
             {
@@ -105,8 +107,14 @@ namespace TimePilot
                 }
             }
 
+            if (dx == 0 && dy == 0)
+            {
+                startX = -10;
+                startY = -10;
+            }
 
-            
+
+
 
             rect = new Rectangle(startX, startY, 100, 100);
             hitbox = new Rectangle(startX-20, startY-20, 40, 40);
