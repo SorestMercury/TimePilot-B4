@@ -122,11 +122,11 @@ namespace TimePilot
 
         public void update()
         {
-            rect.X += dx;
-            rect.Y += dy;
+            rect.X += (int)(dx*1.3);
+            rect.Y += (int)(dy * 1.3);
 
-            hitbox.X += dx;
-            hitbox.Y += dy;
+            hitbox.X += (int)(dx * 1.3);
+            hitbox.Y += (int)(dy * 1.3);
 
         }
     }

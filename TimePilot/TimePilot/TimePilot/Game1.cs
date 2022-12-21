@@ -272,11 +272,6 @@ namespace TimePilot
                     currentSprite = shipSource[x];
             }
 
-            if (enemies.Count < 5)
-            {
-                enemies.Add(new Enemy(plane, 1000));
-            }
-
             /*if(Vector2.Distance(lastTile,new Vector2(ship.X,ship.Y))>=800)
             {
                 topClouds.Clear();
@@ -340,7 +335,7 @@ namespace TimePilot
 
                 }
 
-                if (enemies[i].hitbox.Intersects(shipHitBox) && gameState!=Status.lostLife)
+                if (enemies[i].hitbox.Intersects(shipHitBox) && gameState!=Status.lostLife && gameState!=Status.title && gameState!=Status.gameover)
                 {
                     eToRmove.Add(enemies[i]);
 
@@ -378,10 +373,9 @@ namespace TimePilot
                 enemies.Remove(en);
             }
 
-
-            foreach (Bullet b in bToRmove)
+            foreach (Bullet en in bToRmove)
             {
-                bullets.Remove(b);
+                bullets.Remove(en);
             }
 
             if (hp == 0)
@@ -393,7 +387,10 @@ namespace TimePilot
                 enemies.Clear();
             }
 
-
+            if (enemies.Count < 5)
+            {
+                enemies.Add(new Enemy(plane, 1000));
+            }
 
 
             oldpad1 = pad1;
