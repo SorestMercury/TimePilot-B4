@@ -31,6 +31,12 @@ namespace TimePilot
         Rectangle currentSprite;
         float[] rotations;
         int score = 0;
+        Rectangle shipHitBox;
+        Texture2D cloud1;
+        List<Rectangle> topClouds;
+        int cloud1vel = 5;
+        Texture2D cloud2;
+        List<Rectangle> bottomClouds;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -109,6 +115,24 @@ namespace TimePilot
 
             rotations[32] = rotations[0];
 
+            shipHitBox = new Rectangle(ship.X-ship.Width/2, ship.Y-ship.Height/2, ship.Width-8, ship.Height-8);
+
+            topClouds = new List<Rectangle>();
+            bottomClouds = new List<Rectangle>();
+
+            topClouds.Add(new Rectangle(0, 0, 800, 800));
+
+            //topClouds.Add(new Rectangle(0, -800, 800, 800));
+
+            for (int y = ship.Y - 1200; y < 2400; y += 800)
+                for (int x = ship.X - 1200; x < 2400; x += 800)
+                    topClouds.Add(new Rectangle(x, y, 800, 800));
+
+            for (int y = ship.Y - 1200; y < 2400; y += 800)
+                for (int x = ship.X - 1200; x < 2400; x += 800)
+                    bottomClouds.Add(new Rectangle(x, y, 800, 800));
+
+
             base.Initialize();
         }
 
@@ -132,6 +156,9 @@ namespace TimePilot
             enemies.Add(new Enemy(plane, 1000));
 
             spriteSheet1 = this.Content.Load<Texture2D>("improved spritesheet1");
+
+            cloud1 = this.Content.Load<Texture2D>("clouds plate 1");
+            cloud2 = this.Content.Load<Texture2D>("cloud plate 2");
         }
 
         /// <summary>
@@ -202,17 +229,85 @@ namespace TimePilot
 
             }
 
+            
+
+            
+
+            for (int x = 0; x < rotations.Length - 1; x++)
+            {
+                if (rotation <= rotations[x] && rotation > rotations[x + 1])
+                    currentSprite = shipSource[x];
+            }
+
+            if (enemies.Count < 5)
+            {
+                enemies.Add(new Enemy(plane, 1000));
+            }
+
+            /*if(Vector2.Distance(lastTile,new Vector2(ship.X,ship.Y))>=800)
+            {
+                topClouds.Clear();
+
+                for (int y = ship.Y - 1200; y < 2400; y += 800)
+                    for (int x = ship.X - 1200; x < 2400; x += 800)
+                        topClouds.Add(new Rectangle(x, y, 800, 800));
+
+                lastTile = new Vector2(ship.X, ship.Y);
+            }*/
+            double dx = Math.Sin(rotation + -Math.PI);
+            double dy = Math.Cos(rotation + -Math.PI);
+
+            for (int x=0;x<topClouds.Count;x++)
+            {
+                topClouds[x] = new Rectangle(topClouds[x].X + (int)(cloud1vel*dx), topClouds[x].Y - (int)(cloud1vel*dy), topClouds[x].Width, topClouds[x].Height);
+
+                if (topClouds[x].Left < -800)
+                    topClouds[x] = new Rectangle(800, topClouds[x].Y, topClouds[x].Width, topClouds[x].Height);
+
+                if (topClouds[x].Right > 1600)
+                    topClouds[x] = new Rectangle(-800, topClouds[x].Y, topClouds[x].Width, topClouds[x].Height);
+
+                if (topClouds[x].Top < -800)
+                    topClouds[x] = new Rectangle(topClouds[x].X, 800, topClouds[x].Width, topClouds[x].Height);
+
+                if (topClouds[x].Bottom > 1600)
+                    topClouds[x] = new Rectangle(topClouds[x].X, -800, topClouds[x].Width, topClouds[x].Height);
+            }
+
+            for (int x = 0; x < bottomClouds.Count; x++)
+            {
+                bottomClouds[x] = new Rectangle(bottomClouds[x].X + (int)(3 * dx), bottomClouds[x].Y - (int)(3 * dy), bottomClouds[x].Width, bottomClouds[x].Height);
+
+                if (bottomClouds[x].Left < -800)
+                    bottomClouds[x] = new Rectangle(800, bottomClouds[x].Y, bottomClouds[x].Width, bottomClouds[x].Height);
+
+                if (bottomClouds[x].Right > 1600)
+                    bottomClouds[x] = new Rectangle(-800, bottomClouds[x].Y, bottomClouds[x].Width, bottomClouds[x].Height);
+
+                if (bottomClouds[x].Top < -800)
+                    bottomClouds[x] = new Rectangle(bottomClouds[x].X, 800, bottomClouds[x].Width, bottomClouds[x].Height);
+
+                if (bottomClouds[x].Bottom > 1600)
+                    bottomClouds[x] = new Rectangle(bottomClouds[x].X, -800, bottomClouds[x].Width, bottomClouds[x].Height);
+            }
+
 
             for (int i = 0; i < enemies.Count; i++)
             {
+                /*enemies[i].rect.X += (int)(3 * dx);
+                enemies[i].rect.Y += (int)(3 * dy);
+
+                enemies[i].hitbox.X += (int)(3 * dx);
+                enemies[i].hitbox.Y += (int)(3 * dy);*/
                 enemies[i].update();
+                
                 if (enemies[i].rect.X < 0 || enemies[i].rect.Y < 0 || enemies[i].rect.Y > 800 || enemies[i].rect.Y > 800)
                 {
                     eToRmove.Add(enemies[i]);
 
                 }
 
-                if (enemies[i].rect.Intersects(ship))
+                if (enemies[i].hitbox.Intersects(shipHitBox))
                 {
                     eToRmove.Add(enemies[i]);
 
@@ -221,7 +316,7 @@ namespace TimePilot
                 foreach (Bullet bullet in bullets)
                 {
 
-                    if (enemies[i].rect.Intersects(bullet.rect))
+                    if (enemies[i].hitbox.Intersects(bullet.rect))
                     {
                         bToRmove.Add(bullet);
                         eToRmove.Add(enemies[i]);
@@ -243,16 +338,7 @@ namespace TimePilot
                 bullets.Remove(b);
             }
 
-            for (int x = 0; x < rotations.Length - 1; x++)
-            {
-                if (rotation <= rotations[x] && rotation > rotations[x + 1])
-                    currentSprite = shipSource[x];
-            }
 
-            if (enemies.Count < 5)
-            {
-                enemies.Add(new Enemy(plane, 1000));
-            }
 
             base.Update(gameTime);
         }
@@ -263,7 +349,7 @@ namespace TimePilot
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(new Color(8, 84, 100));
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
@@ -271,10 +357,17 @@ namespace TimePilot
             for (int i = 0; i < enemies.Count; i++)
             {
                 //spriteBatch.Draw(enemies[i].tex, enemies[i].rect, Color.White);
-                spriteBatch.Draw(plane, enemies[i].rect, null, Color.Red, enemies[i].rotation, new Vector2(30, 30), new SpriteEffects(), 0);
+                //spriteBatch.Draw(debug, enemies[i].hitbox, Color.Red);
+                spriteBatch.Draw(plane, enemies[i].rect, null, Color.Red, enemies[i].rotation, new Vector2(240, 260), new SpriteEffects(), 0);
 
             }
 
+            foreach (Rectangle clouds in bottomClouds)
+            {
+                spriteBatch.Draw(cloud2, clouds, Color.White);
+            }
+
+            //spriteBatch.Draw(debug, shipHitBox, Color.Red);
             spriteBatch.Draw(spriteSheet1,ship,currentSprite,Color.White,0,new Vector2(41,42),new SpriteEffects(),0);
 
             for (var i = 0; i < bullets.Count; i++)
@@ -282,22 +375,18 @@ namespace TimePilot
                 //spriteBatch.Draw(projectile, rockets[i], Color.White);
                 spriteBatch.Draw(bulletTex, new Vector2(bullets[i].rect.X, bullets[i].rect.Y), null, Color.White,
                 (float)bullets[i].rotation,
-                new Vector2(5, 5), 0.2f,
+                new Vector2(12, 12), 0.2f,
                 SpriteEffects.None, 0);
+            }
+
+            foreach(Rectangle clouds in topClouds)
+            {
+                spriteBatch.Draw(cloud1, clouds, Color.White);
             }
 
             spriteBatch.End();
 
             base.Draw(gameTime);
-        }
-
-
-        public Boolean isOverlapping(Rectangle rec1, Rectangle rec2)
-        {
-            if ((rec1.X + rec1.Width >= rec2.X && rec1.X < (rec2.X + rec2.Width)) && (rec1.Y + rec1.Height >= rec2.Y && rec1.Y < (rec2.Y + rec2.Height)))
-            { return true; }
-            else
-            { return false; }
         }
 
     }

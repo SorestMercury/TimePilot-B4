@@ -20,6 +20,7 @@ namespace TimePilot
         public float rotation;
         Random rand;
         public Rectangle rect;
+        public Rectangle hitbox;
         public Enemy(Texture2D tex, int points) 
         {
             rand = new Random();
@@ -105,13 +106,17 @@ namespace TimePilot
                 startY = -10;
             }
 
-            rect = new Rectangle(startX, startY, 60, 60);
+            rect = new Rectangle(startX, startY, 100, 100);
+            hitbox = new Rectangle(startX-20, startY-20, 40, 40);
         }
 
         public void update()
         {
             rect.X += dx;
             rect.Y += dy;
+
+            hitbox.X += dx;
+            hitbox.Y += dy;
 
         }
     }
