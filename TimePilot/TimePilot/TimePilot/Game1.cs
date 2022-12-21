@@ -38,11 +38,11 @@ namespace TimePilot
         Texture2D cloud2;
         List<Rectangle> bottomClouds;
         SpriteFont titleScreenFont;
-        enum Status { title, ranks, play, lvl1, lvl2, lvl3, lvl5, lvl6, gameover, endscreen}
-        Texture2D[] titleScreens;
-        Status s;
+        enum Status { title, play, gameover}
+        Status gameState;
         KeyboardState kb;
         GamePadState oldpad1 = GamePad.GetState(PlayerIndex.One);
+        SpriteFont bigFont;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -77,9 +77,6 @@ namespace TimePilot
 
                 if (temp.Y == 0 || temp.Y==180)
                     temp.X += 88;
-            graphics.PreferredBackBufferWidth = 800;
-            graphics.PreferredBackBufferHeight = 800;
-            graphics.ApplyChanges();
 
                 else
                     temp.X += 90;
@@ -142,9 +139,7 @@ namespace TimePilot
                     bottomClouds.Add(new Rectangle(x, y, 800, 800));
 
 
-            s = Status.title;
-            titleScreens = new Texture2D[10];
-
+            gameState = Status.title;
             
 
             base.Initialize();
@@ -174,17 +169,8 @@ namespace TimePilot
             cloud1 = this.Content.Load<Texture2D>("clouds plate 1");
             cloud2 = this.Content.Load<Texture2D>("cloud plate 2");
 
-            titleScreens[0] = this.Content.Load<Texture2D>("titlescreen");
-            titleScreens[1] = this.Content.Load<Texture2D>("titlescores");
-            titleScreens[2] = this.Content.Load<Texture2D>("lvl1s");
-            titleScreens[3] = this.Content.Load<Texture2D>("lvl2");
-            titleScreens[4] = this.Content.Load<Texture2D>("lvl3");
-            titleScreens[5] = this.Content.Load<Texture2D>("lvl4");
-            titleScreens[6] = this.Content.Load<Texture2D>("lvl5");
-            titleScreens[7] = this.Content.Load<Texture2D>("lvl6");
-            titleScreens[8] = this.Content.Load<Texture2D>("gameover");
-            titleScreens[9] = this.Content.Load<Texture2D>("end");
             titleScreenFont = Content.Load<SpriteFont>("SpriteFont1");
+            bigFont = this.Content.Load<SpriteFont>("SpriteFont2");
         }
 
         /// <summary>
@@ -215,7 +201,6 @@ namespace TimePilot
             List<Bullet> bToRmove = new List<Bullet>();
 
             // TODO: Add your update logic here
-            GamePadState pad1 = GamePad.GetState(PlayerIndex.One);
 
             float joyRotation = (float)Math.Atan2(pad1.ThumbSticks.Left.X, pad1.ThumbSticks.Left.Y);
 
@@ -239,7 +224,6 @@ namespace TimePilot
                     if (timer % 10 == 0)
                     {
                         bullets.Add(new Bullet(rotation));
-                        score -= 10;
                     }
                 }
             }
@@ -260,13 +244,9 @@ namespace TimePilot
             
 
             
-            if (pad1.Buttons.Start == ButtonState.Pressed && oldpad1.Buttons.Start != ButtonState.Pressed && (int)s < 9) 
+            if (pad1.Buttons.Start == ButtonState.Pressed && oldpad1.Buttons.Start != ButtonState.Pressed && gameState==Status.title) 
             {
-                s++;
-            }
-            if (kb.IsKeyDown(Keys.Space))
-            {
-                s++;
+                gameState=Status.play;
             }
 
             for (int x = 0; x < rotations.Length - 1; x++)
@@ -356,7 +336,7 @@ namespace TimePilot
                     {
                         bToRmove.Add(bullet);
                         eToRmove.Add(enemies[i]);
-                        score += enemies[i].points;
+                        score += 100;
 
                     }
                 }
@@ -393,52 +373,94 @@ namespace TimePilot
             // TODO: Add your drawing code here
             spriteBatch.Begin();
 
-            for (int i = 0; i < enemies.Count; i++)
+            if(gameState==Status.title)
             {
-                //spriteBatch.Draw(enemies[i].tex, enemies[i].rect, Color.White);
-                //spriteBatch.Draw(debug, enemies[i].hitbox, Color.Red);
-                spriteBatch.Draw(plane, enemies[i].rect, null, Color.Red, enemies[i].rotation, new Vector2(240, 260), new SpriteEffects(), 0);
+                for (int i = 0; i < enemies.Count; i++)
+                {
+                    //spriteBatch.Draw(enemies[i].tex, enemies[i].rect, Color.White);
+                    //spriteBatch.Draw(debug, enemies[i].hitbox, Color.Red);
+                    spriteBatch.Draw(plane, enemies[i].rect, null, Color.Red, enemies[i].rotation, new Vector2(240, 260), new SpriteEffects(), 0);
 
+                }
+
+                foreach (Rectangle clouds in bottomClouds)
+                {
+                    spriteBatch.Draw(cloud2, clouds, Color.White);
+                }
+
+                //spriteBatch.Draw(debug, shipHitBox, Color.Red);
+                //spriteBatch.Draw(spriteSheet1, ship, currentSprite, Color.White, 0, new Vector2(41, 42), new SpriteEffects(), 0);
+
+                /*for (var i = 0; i < bullets.Count; i++)
+                {
+                    //spriteBatch.Draw(projectile, rockets[i], Color.White);
+                    spriteBatch.Draw(bulletTex, new Vector2(bullets[i].rect.X, bullets[i].rect.Y), null, Color.White,
+                    (float)bullets[i].rotation,
+                    new Vector2(12, 12), 0.2f,
+                    SpriteEffects.None, 0);
+                }*/
+
+                foreach (Rectangle clouds in topClouds)
+                {
+                    spriteBatch.Draw(cloud1, clouds, Color.White);
+                }
             }
 
-            foreach (Rectangle clouds in bottomClouds)
+            if(gameState==Status.play)
             {
-                spriteBatch.Draw(cloud2, clouds, Color.White);
-            }
+                for (int i = 0; i < enemies.Count; i++)
+                {
+                    //spriteBatch.Draw(enemies[i].tex, enemies[i].rect, Color.White);
+                    //spriteBatch.Draw(debug, enemies[i].hitbox, Color.Red);
+                    spriteBatch.Draw(plane, enemies[i].rect, null, Color.Red, enemies[i].rotation, new Vector2(240, 260), new SpriteEffects(), 0);
 
-            //spriteBatch.Draw(debug, shipHitBox, Color.Red);
-            spriteBatch.Draw(spriteSheet1,ship,currentSprite,Color.White,0,new Vector2(41,42),new SpriteEffects(),0);
+                }
 
-            for (var i = 0; i < bullets.Count; i++)
-            {
-                //spriteBatch.Draw(projectile, rockets[i], Color.White);
-                spriteBatch.Draw(bulletTex, new Vector2(bullets[i].rect.X, bullets[i].rect.Y), null, Color.White,
-                (float)bullets[i].rotation,
-                new Vector2(12, 12), 0.2f,
-                SpriteEffects.None, 0);
-            }
+                foreach (Rectangle clouds in bottomClouds)
+                {
+                    spriteBatch.Draw(cloud2, clouds, Color.White);
+                }
 
-            foreach(Rectangle clouds in topClouds)
-            {
-                spriteBatch.Draw(cloud1, clouds, Color.White);
+                //spriteBatch.Draw(debug, shipHitBox, Color.Red);
+                spriteBatch.Draw(spriteSheet1, ship, currentSprite, Color.White, 0, new Vector2(41, 42), new SpriteEffects(), 0);
+
+                for (var i = 0; i < bullets.Count; i++)
+                {
+                    //spriteBatch.Draw(projectile, rockets[i], Color.White);
+                    spriteBatch.Draw(bulletTex, new Vector2(bullets[i].rect.X, bullets[i].rect.Y), null, Color.White,
+                    (float)bullets[i].rotation,
+                    new Vector2(12, 12), 0.2f,
+                    SpriteEffects.None, 0);
+                }
+
+                foreach (Rectangle clouds in topClouds)
+                {
+                    spriteBatch.Draw(cloud1, clouds, Color.White);
+                }
             }
 
             spriteBatch.End();
             //comment
             spriteBatch.Begin();
-            if (s== 0 )
+            if (gameState == Status.title)
             {
                 spriteBatch.DrawString(titleScreenFont, "PLAY", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLAY").Length() / 2, 150), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
                 spriteBatch.DrawString(titleScreenFont, "1 -- UP", new Vector2(0, 0), Color.Red);
                 spriteBatch.DrawString(titleScreenFont, "2 -- UP", new Vector2(GraphicsDevice.Viewport.Width - titleScreenFont.MeasureString("2 -- UP").Length(), 0), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-                spriteBatch.DrawString(titleScreenFont, "SCORE", new Vector2(GraphicsDevice.Viewport.Wid-th / 2 - titleScreenFont.MeasureString("SCORE").Length() / 2, 0), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-                spriteBatch.DrawString(titleScreenFont, "TIME     PILOT", new Vector2((GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("TIME     PILOT").Length() / 2) - 3, 202), Color.DarkOrange, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-                spriteBatch.DrawString(titleScreenFont, "TIME     PILOT", new Vector2((GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("TIME     PILOT").Length() / 2), 200), Color.Yellow, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-                spriteBatch.DrawString(titleScreenFont, "PLEASE   DEPOSIT   COIN", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLEASE   DEPOSIT   COIN").Length() / 2, 250), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-                spriteBatch.DrawString(titleScreenFont, "AND   TRY   THIS   GAME", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("AND   TRY   THIS   GAME").Length() / 2, 300), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+                spriteBatch.DrawString(titleScreenFont, "SCORE "+score, new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("SCORE "+score).Length() / 2, 0), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+                spriteBatch.DrawString(bigFont, "TIME     PILOT", new Vector2((GraphicsDevice.Viewport.Width / 2 - bigFont.MeasureString("TIME     PILOT").Length() / 2) - 3, 202), Color.DarkOrange, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+                spriteBatch.DrawString(bigFont, "TIME     PILOT", new Vector2((GraphicsDevice.Viewport.Width / 2 - bigFont.MeasureString("TIME     PILOT").Length() / 2), 200), Color.Yellow, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+                spriteBatch.DrawString(titleScreenFont, "PRESS   START   TO   PLAY", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PRESS   START   TO   PLAY").Length() / 2, 300), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+                spriteBatch.DrawString(titleScreenFont, "AND   TRY   THIS   GAME", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("AND   TRY   THIS   GAME").Length() / 2, 350), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
                 spriteBatch.DrawString(titleScreenFont, "CREDIT  00", new Vector2(GraphicsDevice.Viewport.Width - titleScreenFont.MeasureString("CREDIT  00").Length(), GraphicsDevice.Viewport.Height - 26), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
             }
-            if (s != 0)
+
+            if(gameState==Status.play)
+            {
+                spriteBatch.DrawString(titleScreenFont, "SCORE " + score, new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("SCORE " + score).Length() / 2, 0), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            }
+
+            if (gameState == Status.gameover)
             {
                 spriteBatch.DrawString(titleScreenFont, "PLAYER  1", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLAYER  1").Length() / 2, 250), Color.White, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
                 spriteBatch.DrawString(titleScreenFont, "GAME  OVER", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("GAME  OVER").Length() / 2, 350), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
