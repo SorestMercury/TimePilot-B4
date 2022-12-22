@@ -4,3 +4,5 @@ C:\Users\268119\Desktop\TimePilot\TimePilot-B4\TimePilot\TimePilot\TimePilotCont
 \\Fisd-student1\hs\lths\284964\Documents\GitHub\TimePilot-B4\TimePilot\TimePilot\TimePilotContent\obj\x86\Debug\TimePilotContent.contentproj.CoreCompileInputs.cache
 C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilotContent\obj\x86\Debug\TimePilotContent.contentproj.AssemblyReference.cache
 C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilotContent\obj\x86\Debug\TimePilotContent.contentproj.CoreCompileInputs.cache
+C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilotContent\obj\x86\Debug\TimePilotContent.contentproj.AssemblyReference.cache
+C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilotContent\obj\x86\Debug\TimePilotContent.contentproj.CoreCompileInputs.cache

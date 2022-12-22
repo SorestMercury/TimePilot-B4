@@ -144,7 +144,7 @@ namespace TimePilot
                     bottomClouds.Add(new Rectangle(x, y, 800, 800));
 
 
-            gameState = Status.title;
+            gameState = Status.play;
 
             lives = new Rectangle[3];
             lives[0] = new Rectangle(20, 20, 60, 65);
@@ -448,6 +448,12 @@ namespace TimePilot
                     //spriteBatch.Draw(enemies[i].tex, enemies[i].rect, Color.White);
                     //spriteBatch.Draw(debug, enemies[i].hitbox, Color.Red);
                     spriteBatch.Draw(plane, enemies[i].rect, null, Color.Red, enemies[i].rotation, new Vector2(240, 260), new SpriteEffects(), 0);
+
+                    for (int j = 0; j < enemies[i].bullets.Count; j++)
+                    {
+                        spriteBatch.Draw(debug, enemies[i].bullets[j], null, Color.White, enemies[i].rotation, new Vector2(240, 260), new SpriteEffects(), 0);
+
+                    }
 
                 }
 

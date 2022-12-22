@@ -22,6 +22,9 @@ namespace TimePilot
         public Rectangle rect;
         public Rectangle hitbox;
         public int hp;
+        public List<Rectangle> bullets;
+        int timeToShoot;
+        int time;
         public Enemy(Texture2D tex, int points) 
         {
             hp = 3;
@@ -30,9 +33,10 @@ namespace TimePilot
             dx = rand.Next(-5, 5);
             dy = rand.Next(-5, 5);
 
+            bullets = new List<Rectangle>();
             int direction = rand.Next(0, 1);
             rotation = (float)Math.Atan2(dy, dx) + (float)Math.PI/2;
-
+            timeToShoot = rand.Next(0, 180);
             int startX = 0;
 
             int startY = 0;
@@ -122,12 +126,30 @@ namespace TimePilot
 
         public void update()
         {
-            rect.X += (int)(dx*1.3);
-            rect.Y += (int)(dy * 1.3);
+            time++;
+            rect.X += (int)(dx);
+            rect.Y += (int)(dy);
 
-            hitbox.X += (int)(dx * 1.3);
-            hitbox.Y += (int)(dy * 1.3);
+            hitbox.X += (int)(dx);
+            hitbox.Y += (int)(dy);
 
+            if (timeToShoot == time)
+            {
+                time = 0;
+                timeToShoot = rand.Next(0, 180);
+                bullets.Add(new Rectangle(rect.X, rect.Y, 10, 10));
+            }
+
+            for (var i = 0; i < bullets.Count; i++)
+            {
+                
+                int x = (int)(dx * 1.3); 
+                int y = (int)(dy * 1.3);
+                int currX = bullets[i].X;
+                int currY = bullets[i].Y;
+
+                bullets[i] = new Rectangle(currX + x, currY + y, 10, 10);
+            }
         }
     }
 }
