@@ -208,6 +208,8 @@ namespace TimePilot
 
 
             List<Enemy> eToRmove = new List<Enemy>();
+            List<Rectangle> ebToRmove = new List<Rectangle>();
+
             List<Bullet> bToRmove = new List<Bullet>();
 
             // TODO: Add your update logic here
@@ -335,6 +337,23 @@ namespace TimePilot
 
                 }
 
+                foreach (Rectangle b in enemies[i].bullets)
+                {
+                    if (b.Intersects(shipHitBox) && gameState == Status.play)
+                    {
+                        ebToRmove.Add(b);
+                        score += 20;
+
+                        hp--;
+
+                        if (hp != 0)
+                        {
+                            gameState = Status.lostLife;
+                            lostLife = timer;
+                        }
+                    }
+                }
+
                 if (enemies[i].hitbox.Intersects(shipHitBox) && gameState!=Status.lostLife && gameState!=Status.title && gameState!=Status.gameover)
                 {
                     eToRmove.Add(enemies[i]);
@@ -353,19 +372,28 @@ namespace TimePilot
                 foreach (Bullet bullet in bullets)
                 {
 
-                    if (enemies[i].hitbox.Intersects(bullet.rect) && gameState==Status.play)
+                    if (enemies[i].hitbox.Intersects(bullet.rect) && gameState == Status.play)
                     {
                         bToRmove.Add(bullet);
                         enemies[i].hp--;
 
-                        if(enemies[i].hp<=0)
+                        if (enemies[i].hp <= 0)
                         {
                             eToRmove.Add(enemies[i]);
                             score += 100;
                         }
                     }
-                }
 
+                    foreach (Rectangle b in enemies[i].bullets)
+                    {
+                        if (b.Intersects(bullet.rect) && gameState == Status.play)
+                        {
+                            bToRmove.Add(bullet);
+                            ebToRmove.Add(b);
+                            score += 20;
+                        }
+                    }
+                }
             }
 
             foreach (Enemy en in eToRmove)

@@ -136,15 +136,15 @@ namespace TimePilot
             if (timeToShoot == time)
             {
                 time = 0;
-                timeToShoot = rand.Next(0, 180);
+                timeToShoot = rand.Next(0, 120);
                 bullets.Add(new Rectangle(rect.X, rect.Y, 10, 10));
             }
 
-            for (var i = 0; i < bullets.Count; i++)
+            for (int i = 0; i < bullets.Count; i++)
             {
                 
-                int x = (int)(dx * 1.3); 
-                int y = (int)(dy * 1.3);
+                int x = (int)(dx * 2); 
+                int y = (int)(dy * 2);
                 int currX = bullets[i].X;
                 int currY = bullets[i].Y;
 
