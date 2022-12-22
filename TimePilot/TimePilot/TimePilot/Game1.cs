@@ -208,7 +208,6 @@ namespace TimePilot
 
 
             List<Enemy> eToRmove = new List<Enemy>();
-            List<Rectangle> ebToRmove = new List<Rectangle>();
 
             List<Bullet> bToRmove = new List<Bullet>();
 
@@ -337,6 +336,8 @@ namespace TimePilot
 
                 }
 
+                List<Rectangle> ebToRmove = new List<Rectangle>();
+
                 foreach (Rectangle b in enemies[i].bullets)
                 {
                     if (b.Intersects(shipHitBox) && gameState == Status.play)
@@ -352,6 +353,11 @@ namespace TimePilot
                             lostLife = timer;
                         }
                     }
+                }
+
+                foreach (Rectangle eb in ebToRmove)
+                {
+                    enemies[i].bullets.Remove(eb);
                 }
 
                 if (enemies[i].hitbox.Intersects(shipHitBox) && gameState!=Status.lostLife && gameState!=Status.title && gameState!=Status.gameover)
@@ -384,6 +390,8 @@ namespace TimePilot
                         }
                     }
 
+                    ebToRmove = new List<Rectangle>();
+
                     foreach (Rectangle b in enemies[i].bullets)
                     {
                         if (b.Intersects(bullet.rect) && gameState == Status.play)
@@ -392,6 +400,11 @@ namespace TimePilot
                             ebToRmove.Add(b);
                             score += 20;
                         }
+                    }
+
+                    foreach (Rectangle eb in ebToRmove)
+                    {
+                        enemies[i].bullets.Remove(eb);
                     }
                 }
             }
