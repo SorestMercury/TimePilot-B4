@@ -30,8 +30,8 @@ namespace TimePilot
             hp = 3;
             rand = new Random();
             this.tex = tex;
-            dx = rand.Next(-5, 5);
-            dy = rand.Next(-5, 5);
+            dx = rand.Next(-3, 3);
+            dy = rand.Next(-3, 3);
 
             bullets = new List<Rectangle>();
             int direction = rand.Next(0, 1);

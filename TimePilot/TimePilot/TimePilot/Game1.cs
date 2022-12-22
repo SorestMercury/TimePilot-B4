@@ -144,7 +144,7 @@ namespace TimePilot
                     bottomClouds.Add(new Rectangle(x, y, 800, 800));
 
 
-            gameState = Status.play;
+            gameState = Status.title;
 
             lives = new Rectangle[3];
             lives[0] = new Rectangle(20, 20, 60, 65);
@@ -433,6 +433,20 @@ namespace TimePilot
                 enemies.Add(new Enemy(plane, 1000));
             }
 
+            foreach(Enemy enemy in enemies)
+            {
+                enemy.rect.X += (int)(dx*4);
+                enemy.rect.Y += -(int)(dy*4);
+
+                enemy.hitbox.X += (int)(dx * 4);
+                enemy.hitbox.Y += -(int)(dy * 4);
+
+                for(int x=0;x<enemy.bullets.Count;x++)
+                {
+                    enemy.bullets[x] = new Rectangle(enemy.bullets[x].X + (int)(dx * 4), enemy.bullets[x].Y + -(int)(dy * 4), enemy.bullets[x].Width, enemy.bullets[x].Height);
+                }
+            }
+
 
             oldpad1 = pad1;
             base.Update(gameTime);
@@ -551,6 +565,7 @@ namespace TimePilot
             {
                 spriteBatch.DrawString(titleScreenFont, "PLAYER  1", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLAYER  1").Length() / 2, 250), Color.White, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
                 spriteBatch.DrawString(titleScreenFont, "GAME  OVER", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("GAME  OVER").Length() / 2, 350), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+                spriteBatch.DrawString(titleScreenFont, "SCORE:  " + score, new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("SCORE:  "+score).Length() / 2, 375), Color.Yellow, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
             }
 
             //spriteBatch.DrawString(titleScreenFont, "PLAY", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLAY").Length() / 2, 150), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);

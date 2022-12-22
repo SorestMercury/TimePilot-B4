@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\titlescreen.xnb</Output>
-      <Time>2022-12-21T22:54:31.2956029-06:00</Time>
+      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\titlescreen.xnb</Output>
+      <Time>2022-12-21T19:22:55.9661796-06:00</Time>
     </Item>
     <Item>
       <Source>starttp.PNG</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\starttp.xnb</Output>
-      <Time>2022-12-21T22:54:31.2875613-06:00</Time>
+      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\starttp.xnb</Output>
+      <Time>2022-12-21T19:22:55.9626037-06:00</Time>
     </Item>
     <Item>
       <Source>titlescores.PNG</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\titlescores.xnb</Output>
-      <Time>2022-12-21T22:54:31.2910735-06:00</Time>
+      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\titlescores.xnb</Output>
+      <Time>2022-12-21T19:22:55.9656688-06:00</Time>
     </Item>
     <Item>
       <Source>end.PNG</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\end.xnb</Output>
-      <Time>2022-12-21T22:54:31.2241962-06:00</Time>
+      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\end.xnb</Output>
+      <Time>2022-12-21T19:22:55.9294375-06:00</Time>
     </Item>
     <Item>
       <Source>gameover.PNG</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\gameover.xnb</Output>
-      <Time>2022-12-21T22:54:31.2261954-06:00</Time>
+      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\gameover.xnb</Output>
+      <Time>2022-12-21T19:22:55.9314759-06:00</Time>
     </Item>
     <Item>
       <Source>lvl1s.PNG</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl1s.xnb</Output>
-      <Time>2022-12-21T22:54:31.2363798-06:00</Time>
+      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl1s.xnb</Output>
+      <Time>2022-12-21T19:22:55.9340545-06:00</Time>
     </Item>
     <Item>
       <Source>lvl2.PNG</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl2.xnb</Output>
-      <Time>2022-12-21T22:54:31.2414973-06:00</Time>
+      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl2.xnb</Output>
+      <Time>2022-12-21T19:22:55.9372248-06:00</Time>
     </Item>
     <Item>
       <Source>lvl3.PNG</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl3.xnb</Output>
-      <Time>2022-12-21T22:54:31.2414973-06:00</Time>
+      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl3.xnb</Output>
+      <Time>2022-12-21T19:22:55.9398235-06:00</Time>
     </Item>
     <Item>
       <Source>lvl4.PNG</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl4.xnb</Output>
-      <Time>2022-12-21T22:54:31.253893-06:00</Time>
+      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl4.xnb</Output>
+      <Time>2022-12-21T19:22:55.9429259-06:00</Time>
     </Item>
     <Item>
       <Source>lvl5.PNG</Source>
@@ -88,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl5.xnb</Output>
-      <Time>2022-12-21T22:54:31.2609821-06:00</Time>
+      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl5.xnb</Output>
+      <Time>2022-12-21T19:22:55.9455033-06:00</Time>
     </Item>
     <Item>
       <Source>lvl6.PNG</Source>
@@ -97,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl6.xnb</Output>
-      <Time>2022-12-21T22:54:31.2709558-06:00</Time>
+      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl6.xnb</Output>
+      <Time>2022-12-21T19:22:55.9485975-06:00</Time>
     </Item>
     <Item>
       <Source>SpriteFont1.spritefont</Source>
@@ -106,8 +106,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
-      <Time>2022-12-21T23:13:57.1090549-06:00</Time>
+      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2022-12-22T01:06:03.142411-06:00</Time>
     </Item>
     <Item>
       <Source>SpriteFont2.spritefont</Source>
@@ -115,8 +115,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\SpriteFont2.xnb</Output>
-      <Time>2022-12-21T23:13:57.11615-06:00</Time>
+      <Output>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\SpriteFont2.xnb</Output>
+      <Time>2022-12-22T01:06:03.1367533-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -125,10 +125,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilotContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Agarw\Documents\GitHub\SGAI-Outbreak\willy2\willy2\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilotContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Dylan\Desktop\github\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -157,7 +157,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2022-09-02T14:06:41.361725-05:00</Value>
+        <Value>2022-09-25T15:55:39.008878-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
