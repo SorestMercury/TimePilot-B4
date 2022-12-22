@@ -311,7 +311,7 @@ namespace TimePilot
                     bottomClouds[x] = new Rectangle(bottomClouds[x].X, -800, bottomClouds[x].Width, bottomClouds[x].Height);
             }
 
-            //update enemies, despawn if out of bounds
+            //update enemies, despawn if out of bounds or colliding with player bullet/player, decrement player hp if player and enemy collide
             for (int i = 0; i < enemies.Count; i++)
             {
                 enemies[i].update();
@@ -323,12 +323,12 @@ namespace TimePilot
 
                 List<Rectangle> ebToRmove = new List<Rectangle>();
 
+                //check if enemy bullet is hitting player
                 foreach (Rectangle b in enemies[i].bullets)
                 {
                     if (b.Intersects(shipHitBox) && gameState == Status.play)
                     {
                         ebToRmove.Add(b);
-                        score += 20;
 
                         hp--;
 
@@ -340,11 +340,13 @@ namespace TimePilot
                     }
                 }
 
+                //cleanup, delete enemy bullets in deletion queue
                 foreach (Rectangle eb in ebToRmove)
                 {
                     enemies[i].bullets.Remove(eb);
                 }
 
+                //check if enemy is hitting player
                 if (enemies[i].hitbox.Intersects(shipHitBox) && gameState!=Status.lostLife && gameState!=Status.title && gameState!=Status.gameover)
                 {
                     eToRmove.Add(enemies[i]);
@@ -356,10 +358,9 @@ namespace TimePilot
                         gameState = Status.lostLife;
                         lostLife = timer;
                     }
-
-
-                    //lose a life
                 }
+                
+                //check if enemies are getting hit by player bullets
                 foreach (Bullet bullet in bullets)
                 {
 
@@ -377,6 +378,7 @@ namespace TimePilot
 
                     ebToRmove = new List<Rectangle>();
 
+                    //check if enemy bullets are being hit by player bullets
                     foreach (Rectangle b in enemies[i].bullets)
                     {
                         if (b.Intersects(bullet.rect) && gameState == Status.play)
@@ -387,6 +389,7 @@ namespace TimePilot
                         }
                     }
 
+                    //cleanup, rmeove enemy bullets in deletion queue
                     foreach (Rectangle eb in ebToRmove)
                     {
                         enemies[i].bullets.Remove(eb);
@@ -394,30 +397,36 @@ namespace TimePilot
                 }
             }
 
+            //cleanup, remove enemies in the removal queue from the main list
             foreach (Enemy en in eToRmove)
             {
                 enemies.Remove(en);
             }
 
+            //same thing for bullets
             foreach (Bullet en in bToRmove)
             {
                 bullets.Remove(en);
             }
 
+            //initate gameover state
             if (hp == 0)
                 gameState = Status.gameover;
 
+            //allow player to play after losing a life and waiting on the fake loading screen
             if (timer - lostLife == 60 && lostLife!=0 && gameState!=Status.gameover)
             {
                 gameState = Status.play;
                 enemies.Clear();
             }
 
+            //ensure that a minimum of 5 enemies exist at all times
             if (enemies.Count < 5)
             {
                 enemies.Add(new Enemy(plane, 1000));
             }
 
+            //update enemies to move in the same way that the clouds do
             foreach(Enemy enemy in enemies)
             {
                 enemy.rect.X += (int)(dx*4);
@@ -426,12 +435,14 @@ namespace TimePilot
                 enemy.hitbox.X += (int)(dx * 4);
                 enemy.hitbox.Y += -(int)(dy * 4);
 
+                //check if enemy bullets are hitting player
                 for(int x=0;x<enemy.bullets.Count;x++)
                 {
                     enemy.bullets[x] = new Rectangle(enemy.bullets[x].X + (int)(dx * 4), enemy.bullets[x].Y + -(int)(dy * 4), enemy.bullets[x].Width, enemy.bullets[x].Height);
                 }
             }
 
+            //allow user to play again from gmeover screen
             if(gameState==Status.gameover && pad1.Buttons.Start==ButtonState.Pressed && oldpad1.Buttons.Start!=ButtonState.Pressed)
             {
                 enemies.Clear();
@@ -496,13 +507,14 @@ namespace TimePilot
                 {
                     //spriteBatch.Draw(enemies[i].tex, enemies[i].rect, Color.White);
                     //spriteBatch.Draw(debug, enemies[i].hitbox, Color.Red);
-                    spriteBatch.Draw(plane, enemies[i].rect, null, Color.Red, enemies[i].rotation, new Vector2(240, 260), new SpriteEffects(), 0);
 
                     for (int j = 0; j < enemies[i].bullets.Count; j++)
                     {
                         spriteBatch.Draw(debug, enemies[i].bullets[j], null, Color.White, enemies[i].rotation, new Vector2(240, 260), new SpriteEffects(), 0);
 
                     }
+
+                    spriteBatch.Draw(plane, enemies[i].rect, null, Color.Red, enemies[i].rotation, new Vector2(240, 260), new SpriteEffects(), 0);
 
                 }
 
@@ -562,18 +574,6 @@ namespace TimePilot
                 spriteBatch.DrawString(titleScreenFont, "SCORE:  " + score, new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("SCORE:  "+score).Length() / 2, 375), Color.Yellow, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
                 spriteBatch.DrawString(titleScreenFont, "PRESS  START  TO  PLAY  AGAIN", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PRESS  START  TO  PLAY  AGAIN").Length() / 2, 475), Color.Green, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
             }
-
-            //spriteBatch.DrawString(titleScreenFont, "PLAY", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLAY").Length() / 2, 150), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-            //spriteBatch.DrawString(titleScreenFont, "1 -- UP", new Vector2(0, 0), Color.Red);
-            //spriteBatch.DrawString(titleScreenFont, "2 -- UP", new Vector2(GraphicsDevice.Viewport.Width - titleScreenFont.MeasureString("2 -- UP").Length(), 0), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-            //spriteBatch.DrawString(titleScreenFont, "SCORE", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("SCORE").Length() / 2, 0), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-            //spriteBatch.DrawString(titleScreenFont, "TIME     PILOT", new Vector2((GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("TIME     PILOT").Length() / 2) - 3, 202), Color.DarkOrange, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-            //spriteBatch.DrawString(titleScreenFont, "TIME     PILOT", new Vector2((GraphicsDevice.Viewport.Width  / 2 - titleScreenFont.MeasureString("TIME     PILOT").Length() / 2), 200), Color.Yellow, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-            //spriteBatch.DrawString(titleScreenFont, "PLEASE   DEPOSIT   COIN", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLEASE   DEPOSIT   COIN").Length() / 2, 250), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-            //spriteBatch.DrawString(titleScreenFont, "AND   TRY   THIS   GAME", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("AND   TRY   THIS   GAME").Length() / 2, 300), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-            //spriteBatch.DrawString(titleScreenFont, "CREDIT  00", new Vector2(GraphicsDevice.Viewport.Width - titleScreenFont.MeasureString("CREDIT  00").Length(), GraphicsDevice.Viewport.Height - 26), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
-
-
 
             spriteBatch.End();
 
