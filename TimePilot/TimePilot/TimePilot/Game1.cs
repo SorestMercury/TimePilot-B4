@@ -131,10 +131,6 @@ namespace TimePilot
             topClouds = new List<Rectangle>();
             bottomClouds = new List<Rectangle>();
 
-            topClouds.Add(new Rectangle(0, 0, 800, 800));
-
-            //topClouds.Add(new Rectangle(0, -800, 800, 800));
-
             for (int y = ship.Y - 1200; y < 2400; y += 800)
                 for (int x = ship.X - 1200; x < 2400; x += 800)
                     topClouds.Add(new Rectangle(x, y, 800, 800));
@@ -201,24 +197,25 @@ namespace TimePilot
         {
             timer++;
             GamePadState pad1 = GamePad.GetState(PlayerIndex.One);
-            // Allows the game to exit
             kb = Keyboard.GetState();
+
+            // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-
+            // TODO: Add your update logic here
             List<Enemy> eToRmove = new List<Enemy>();
 
             List<Bullet> bToRmove = new List<Bullet>();
 
-            // TODO: Add your update logic here
-
+            //calculate joystick rotation
             float joyRotation = (float)Math.Atan2(pad1.ThumbSticks.Left.X, pad1.ThumbSticks.Left.Y);
 
-            if (Math.Abs(pad1.ThumbSticks.Left.X) >= .5 || Math.Abs(pad1.ThumbSticks.Left.Y) >= .5)
+            if ((Math.Abs(pad1.ThumbSticks.Left.X) >= .5 || Math.Abs(pad1.ThumbSticks.Left.Y) >= .5) && gameState==Status.play)
             {
                 float distance = Math.Abs(rotation - joyRotation);
 
+                //if distance is greater than half a revolution away, it would be faster to rotate the other direction
                 if (distance > Math.PI)
                     joyRotation += (float)(2 * Math.PI * Math.Sign(rotation - joyRotation));
 
@@ -227,6 +224,7 @@ namespace TimePilot
                 rotation = MathHelper.WrapAngle(rotation);
             }
 
+            //allow ship to shoot
             if (pad1.IsButtonDown(Buttons.RightTrigger))
             {
                 if (timer % 5 == 0)
@@ -239,7 +237,7 @@ namespace TimePilot
                 }
             }
 
-
+            //update bullets, check if they are off screen and desspawn them if they are
             for (var i = 0; i < bullets.Count; i++)
             {
 
@@ -248,44 +246,36 @@ namespace TimePilot
                 {
                     bToRmove.Add(bullets[i]);
                 }
-
-
             }
 
-            
-
-            
+            //initiate fake loading screen after user presses start on title screen
             if (pad1.Buttons.Start == ButtonState.Pressed && oldpad1.Buttons.Start != ButtonState.Pressed && gameState==Status.title) 
             {
                 gameState=Status.playLoad;
                 loadTime = timer;
             }
 
+            //allow user to pluy again from gameover screen
             if (timer-loadTime == 60 && loadTime!=0 && gameState!=Status.gameover)
             {
                 gameState = Status.play;
+                hp = 3;
+                enemies.Clear();
                 background = new Color(8, 84, 100);
             }
 
+            //determine which sprite the ship should be using based on the current rotation value
             for (int x = 0; x < rotations.Length - 1; x++)
             {
                 if (rotation <= rotations[x] && rotation > rotations[x + 1])
                     currentSprite = shipSource[x];
             }
 
-            /*if(Vector2.Distance(lastTile,new Vector2(ship.X,ship.Y))>=800)
-            {
-                topClouds.Clear();
-
-                for (int y = ship.Y - 1200; y < 2400; y += 800)
-                    for (int x = ship.X - 1200; x < 2400; x += 800)
-                        topClouds.Add(new Rectangle(x, y, 800, 800));
-
-                lastTile = new Vector2(ship.X, ship.Y);
-            }*/
+            //determine x and y speed that clouds should be moving, based on rotation of ship
             double dx = Math.Sin(rotation + -Math.PI);
             double dy = Math.Cos(rotation + -Math.PI);
 
+            //create infinite tiling effect with clouds by constantly repositioning them in the direction that the player is facing
             for (int x=0;x<topClouds.Count;x++)
             {
                 topClouds[x] = new Rectangle(topClouds[x].X + (int)(cloud1vel*dx), topClouds[x].Y - (int)(cloud1vel*dy), topClouds[x].Width, topClouds[x].Height);
@@ -303,6 +293,7 @@ namespace TimePilot
                     topClouds[x] = new Rectangle(topClouds[x].X, -800, topClouds[x].Width, topClouds[x].Height);
             }
 
+            //same thing but for background clouds, creates parallax effect
             for (int x = 0; x < bottomClouds.Count; x++)
             {
                 bottomClouds[x] = new Rectangle(bottomClouds[x].X + (int)(3 * dx), bottomClouds[x].Y - (int)(3 * dy), bottomClouds[x].Width, bottomClouds[x].Height);
@@ -320,20 +311,14 @@ namespace TimePilot
                     bottomClouds[x] = new Rectangle(bottomClouds[x].X, -800, bottomClouds[x].Width, bottomClouds[x].Height);
             }
 
-
+            //update enemies, despawn if out of bounds
             for (int i = 0; i < enemies.Count; i++)
             {
-                /*enemies[i].rect.X += (int)(3 * dx);
-                enemies[i].rect.Y += (int)(3 * dy);
-
-                enemies[i].hitbox.X += (int)(3 * dx);
-                enemies[i].hitbox.Y += (int)(3 * dy);*/
                 enemies[i].update();
                 
-                if (enemies[i].rect.X < 0 || enemies[i].rect.Y < 0 || enemies[i].rect.Y > 800 || enemies[i].rect.Y > 800)
+                if (enemies[i].hitbox.X < 0-enemies[i].rect.Width || enemies[i].hitbox.Y < 0-enemies[i].rect.Height || enemies[i].hitbox.Y > 800 || enemies[i].hitbox.Y > 800)
                 {
                     eToRmove.Add(enemies[i]);
-
                 }
 
                 List<Rectangle> ebToRmove = new List<Rectangle>();
@@ -445,6 +430,15 @@ namespace TimePilot
                 {
                     enemy.bullets[x] = new Rectangle(enemy.bullets[x].X + (int)(dx * 4), enemy.bullets[x].Y + -(int)(dy * 4), enemy.bullets[x].Width, enemy.bullets[x].Height);
                 }
+            }
+
+            if(gameState==Status.gameover && pad1.Buttons.Start==ButtonState.Pressed && oldpad1.Buttons.Start!=ButtonState.Pressed)
+            {
+                enemies.Clear();
+                score = 0;
+                hp = 3;
+                gameState = Status.playLoad;
+                loadTime = timer;
             }
 
 
@@ -566,6 +560,7 @@ namespace TimePilot
                 spriteBatch.DrawString(titleScreenFont, "PLAYER  1", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLAYER  1").Length() / 2, 250), Color.White, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
                 spriteBatch.DrawString(titleScreenFont, "GAME  OVER", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("GAME  OVER").Length() / 2, 350), Color.Red, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
                 spriteBatch.DrawString(titleScreenFont, "SCORE:  " + score, new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("SCORE:  "+score).Length() / 2, 375), Color.Yellow, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+                spriteBatch.DrawString(titleScreenFont, "PRESS  START  TO  PLAY  AGAIN", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PRESS  START  TO  PLAY  AGAIN").Length() / 2, 475), Color.Green, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
             }
 
             //spriteBatch.DrawString(titleScreenFont, "PLAY", new Vector2(GraphicsDevice.Viewport.Width / 2 - titleScreenFont.MeasureString("PLAY").Length() / 2, 150), Color.DeepSkyBlue, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);

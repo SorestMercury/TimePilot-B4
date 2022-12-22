@@ -64,12 +64,6 @@ C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\
 C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\titlescores.xnb
 C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\end.xnb
 C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\gameover.xnb
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl1s.xnb
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl2.xnb
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl3.xnb
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl4.xnb
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl5.xnb
-C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\lvl6.xnb
 C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\Content\SpriteFont1.xnb
 C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.exe
 C:\Users\Dylan\Desktop\coding files\Time Pilot\TimePilot-B4\TimePilot\TimePilot\TimePilot\bin\x86\Debug\TimePilot.pdb

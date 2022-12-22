@@ -33,6 +33,12 @@ namespace TimePilot
             dx = rand.Next(-3, 3);
             dy = rand.Next(-3, 3);
 
+            while (dx == 0 || dy == 0)
+            {
+                dx = rand.Next(-5, 5);
+                dy = rand.Next(-5, 5);
+            }
+
             bullets = new List<Rectangle>();
             int direction = rand.Next(0, 1);
             rotation = (float)Math.Atan2(dy, dx) + (float)Math.PI/2;
@@ -41,11 +47,7 @@ namespace TimePilot
 
             int startY = 0;
 
-            /*while (dx == 0 && dy == 0)
-            {
-                dx = rand.Next(-5, 5);
-                dy = rand.Next(-5, 5);
-            }*/
+            
 
             if (dx > 0 && dy > 0)
             {
